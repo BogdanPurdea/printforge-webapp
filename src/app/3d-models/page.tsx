@@ -1,7 +1,8 @@
+'use client';
 import { getAllModels } from '../lib/models';
 import { Model } from '../types/Model';
-import ModelCard from '../components/ModelCard';
-
+import ModelsGrid from '../components/ModelsGrid';
+import { useEffect, useState } from 'react';
 
 const getModels = async (): Promise<Model[]> => {
   try {
@@ -13,16 +14,19 @@ const getModels = async (): Promise<Model[]> => {
   }
 };
 
-export default async function ModelsPage() {
-  const models = await getModels();
+export default function ModelsPage() {
+  const [models, setModels] = useState<Model[]>([]);
+
+  useEffect(() => {
+    const timer = setTimeout(async () => {
+      const data = await getModels();
+      setModels(data);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold mb-8">3D Models</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {models.map((model: Model) => (
-          <ModelCard key={model.id} model={model} />
-        ))}
-      </div>
-    </section>
+    <ModelsGrid title="3D Models" models={models} />
   );
+
 }
