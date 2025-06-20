@@ -5,7 +5,7 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 ## Immediate Improvements (Beginner-Friendly)
 
 ### 1. Loading States
-- [ ] Implement skeleton loaders for model cards
+- [X] Implement skeleton loaders for model cards
 - [ ] Add loading spinners for page transitions
 - [ ] Learn: React Suspense, conditional rendering
 
