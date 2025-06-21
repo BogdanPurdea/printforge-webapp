@@ -17,7 +17,7 @@ export default function About() {
                 </div>
             </section>
             <hr className="w-full border-gray-300 my-8" />
-            <section className="flex flex-row items-start">
+            <section className="flex flex-row items-start p-4 gap-8 w-full">
                 <article>
                     <h3 className="mt-6">100K+ Models</h3>
                     <p>Access our vast library of community-created 3D models, from practical tools to artistic creations.</p>

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+    --color-orange-accent: oklch(0.78 0.16 50);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-montserrat-alternates)
 }
