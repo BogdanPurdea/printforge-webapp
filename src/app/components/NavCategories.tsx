@@ -42,7 +42,7 @@ export default function NavCategories() {
                                 <NavLink
                                     key={category.slug}
                                     href={`/3d-models/categories/${category.slug}`}
-                                    isActive={isActive(`/3d-model/categories/${category.slug}`)}
+                                    isActive={isActive(`/3d-models/categories/${category.slug}`)}
                                 > {category.displayName} </NavLink>
                             )
                         }
