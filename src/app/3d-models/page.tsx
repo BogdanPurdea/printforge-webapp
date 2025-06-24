@@ -1,10 +1,12 @@
-import { getAllModels } from '../lib/models';
+import { getModels } from '../lib/models';
 import { Model } from '../types/Model';
 import ModelsGrid from '../components/ModelsGrid';
+import { ModelsPageProps } from '../types/ModelsPageProps';
 
-const getModels = async (): Promise<Model[]> => {
+
+const getAllModels = async (): Promise<Model[]> => {
   try {
-    const models = await getAllModels();
+    const models = await getModels();
     return models;
   } catch (error) {
     console.error('Error fetching models:', error);
@@ -12,11 +14,14 @@ const getModels = async (): Promise<Model[]> => {
   }
 };
 
-export default async function ModelsPage() {
-  const models = await getModels();
-
+export default async function ModelsPage({ searchParams }: ModelsPageProps) {
+  const query = (await searchParams)?.query;
+  const models = await getAllModels();
+  
   return (
-    <ModelsGrid title="3D Models" models={models} />
+    <section>
+      
+      <ModelsGrid title="3D Models" models={models} filterQuery={query} />
+    </section>
   );
-
 }

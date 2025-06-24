@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 
 export default function NavHeader() {
     const pathname = usePathname();
-    const isActive = (href: string): boolean => pathname === href || pathname.startsWith(href);
+    const isActive = (href: string): boolean => pathname === href || pathname.includes(href);
     return (
         <nav className='bg-white-800 text-black-600 flex items-center justify-between p-4 shadow-md'>
             <Link href="/">
