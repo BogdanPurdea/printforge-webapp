@@ -7,7 +7,7 @@ export default function Home() {
       <h1 className="text-4xl font-bold">Discover what’s possible with 3D printing</h1>
       <p className="mt-4 text-lg">Join our community of creators and explore a vast library of user-submitted models.</p>
       <Link href="/3d-models" className="mt-8">
-        <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors cursor-pointer">
+        <button className="px-6 py-3 bg-orange-accent text-white rounded-lg hover:bg-orange-400 transition-colors cursor-pointer">
           Browse Models
         </button>
       </Link>

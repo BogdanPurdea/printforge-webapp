@@ -5,8 +5,8 @@ import { ModelCardProps } from "../types/ModelCardProps"
 
 export default function ModelCard({ model }: ModelCardProps) {
     return (
-        <Link href={`/3d-models/${model.id}`} className="block hover:shadow-lg transition-all duration-300 hover:scale-105" aria-labelledby={`model-${model.id}-title`}>
-            <div key={model.id} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+        <Link href={`/3d-models/${model.id}`} className="block hover:shadow-lg transition-all duration-300 hover:scale-105 h-full" aria-labelledby={`model-${model.id}-title`}>
+            <div key={model.id} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden h-full">
                 <img src={model.image} alt={model.name} className="w-full h-48 object-cover" />
                 <div className="p-4">
                     <h2 className="text-lg font-semibold mb-2 text-gray-900">{model.name}</h2>

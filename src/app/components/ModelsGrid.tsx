@@ -3,6 +3,7 @@ import ModelCard from "@/app/components/ModelCard";
 import { Model } from "@/app/types/Model";
 import { ModelCardSkeleton } from "./ModelCardSkeleton";
 import SearchForm from '@/app/components/SearchForm';
+import { Suspense } from "react";
 
 export default function ModelsGrid({ title, models, filterQuery }: ModelsGridProps) {
     const filteredModels = models.filter((model: Model) => {
@@ -20,14 +21,9 @@ export default function ModelsGrid({ title, models, filterQuery }: ModelsGridPro
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
                 {
-
-                    displayModels.length > 0
-                        ? displayModels.map((model) => (
-                            <ModelCard key={model.id} model={model} />
-                        ))
-                        : Array.from({ length: 12 }).map((_, idx) => (
-                            <ModelCardSkeleton key={idx} />
-                        ))
+                    displayModels.map((model) => (
+                        <ModelCard key={model.id} model={model} />
+                    ))
                 }
             </div>
         </section>

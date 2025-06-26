@@ -6,8 +6,8 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 
 ### 1. Loading States
 - [X] Implement skeleton loaders for model cards
-- [ ] Add loading spinners for page transitions
-- [ ] Learn: React Suspense, conditional rendering
+- [X] Add loading spinners for page transitions
+- [ ] Learn: React Suspense
 
 ### 2. Error Boundaries
 - [ ] Add React error boundaries for better error handling
@@ -20,12 +20,12 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [ ] Learn: Mobile-first design, Tailwind responsive utilities
 
 ### 4. Search Functionality
-- [ ] Add search bar to filter models by name/description
+- [X] Add search bar to filter models by name/description
 - [ ] Implement debounced search for performance
 - [ ] Learn: useState, useEffect, array filtering
 
 ### 5. Category Filtering
-- [ ] Add filter buttons to browse models by category
+- [X] Add filter buttons to browse models by category
 - [ ] Show active filter states
 - [ ] Learn: State management, array methods
 
