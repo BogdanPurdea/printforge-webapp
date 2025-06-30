@@ -2,6 +2,7 @@ import { getModels } from '../lib/models';
 import { Model } from '../types/Model';
 import ModelsGrid from '../components/ModelsGrid';
 import { ModelsPageProps } from '../types/ModelsPageProps';
+import ModelsGridErrorBoundary from '../components/ModelsGridErrorBoundary';
 
 
 const getAllModels = async (): Promise<Model[]> => {
@@ -17,11 +18,12 @@ const getAllModels = async (): Promise<Model[]> => {
 export default async function ModelsPage({ searchParams }: ModelsPageProps) {
   const query = (await searchParams)?.query;
   const models = await getAllModels();
-  
+
   return (
     <section>
-      
-      <ModelsGrid title="3D Models" models={models} filterQuery={query} />
+      <ModelsGridErrorBoundary >
+        <ModelsGrid title="3D Models" models={models} filterQuery={query} />
+      </ModelsGridErrorBoundary>
     </section>
   );
 }
