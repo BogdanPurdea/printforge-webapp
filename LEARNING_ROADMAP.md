@@ -10,9 +10,9 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [ ] Learn: React Suspense
 
 ### 2. Error Boundaries
-- [ ] Add React error boundaries for better error handling
-- [ ] Create fallback UI components for errors
-- [ ] Learn: Error boundaries, try/catch in React
+- [X] Add React error boundaries for better error handling
+- [X] Create fallback UI components for errors
+- [X] Learn: Error boundaries, try/catch in React
 
 ### 3. Responsive Navigation
 - [ ] Make header mobile-friendly with hamburger menu

@@ -2,18 +2,33 @@ import categories from "../data/categories.json"
 import { Category } from "../types/Category"
 
 export async function getAllCategories(): Promise<Category[]> {
-    return categories;
+    try {
+        return categories;
+    } catch (error) {
+        console.error("Failed to get all categories:", error);
+        throw new Error("Failed to get all categories");
+    }
 }
 
 export async function getCategoryBySlug(slug: string): Promise<Category> {
-    const category = categories.find(c => c.slug === slug);
-    if (!category) {
-        throw new Error(`Category with slug ${slug} not found`)
+    try {
+        const category = categories.find(c => c.slug === slug);
+        if (!category) {
+            throw new Error(`Category with slug ${slug} not found`)
+        }
+        return category;
+    } catch (error) {
+        console.error(`Failed to get category by slug (${slug}):`, error);
+        throw error;
     }
-    return category;
 }
 
 export async function getDisplayNameFromSlug(slug: string): Promise<string> {
-    const category = await getCategoryBySlug(slug);
-    return category.displayName;
+    try {
+        const category = await getCategoryBySlug(slug);
+        return category.displayName;
+    } catch (error) {
+        console.error(`Failed to get display name from slug (${slug}):`, error);
+        throw error;
+    }
 }
