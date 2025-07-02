@@ -6,9 +6,12 @@ import Link from 'next/link';
 import PrintForgeLogo from '@/../public/printforge-logo.svg';
 import PrintForgeLogoMobile from '@/../public/printforge-logo-mobile.svg';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function NavHeader() {
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const isActive = (href: string): boolean => pathname === href || pathname.includes(href);
     return (
         <nav className='bg-white-800 text-black-600 flex items-center justify-between p-4 shadow-md'>
@@ -32,10 +35,44 @@ export default function NavHeader() {
                     />
                 </div>
             </Link>
-            <ul className="flex space-x-10 p-4">
+            {/* Desktop nav */}
+            <ul className="hidden md:flex space-x-10 p-4">
                 <NavLink href="/3d-models" isActive={isActive("/3d-models")}>3D Models</NavLink>
                 <NavLink href="/about" isActive={isActive("/about")}>About</NavLink>
             </ul>
+            {/* Hamburger icon for mobile */}
+            <button
+                className="block md:hidden z-20"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
+                {isMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+            </button>
+            {/* Mobile menu */}
+            {isMenuOpen && (
+                <ul className="absolute top-14 right-4 w-48 bg-white text-black flex flex-col items-end space-y-4 py-4 px-6 shadow-2xl md:hidden z-50 rounded-lg animate-fadeInDown border-2" style={{ borderColor: 'var(--color-orange-accent)' }}>
+                    <NavLink href="/3d-models" isActive={isActive("/3d-models")}
+                        onClick={() => setIsMenuOpen(false)}>
+                        3D Models
+                    </NavLink>
+                    <hr className="w-full border-t-2" style={{ borderColor: 'var(--color-orange-accent)' }} />
+                    <NavLink href="/about" isActive={isActive("/about")}
+                        onClick={() => setIsMenuOpen(false)}>
+                        About
+                    </NavLink>
+                </ul>
+            )}
         </nav>
     )
 }
+
+/* Add this to your global CSS or Tailwind config for the animation */
+/*
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInDown {
+  animation: fadeInDown 0.3s ease;
+}
+*/

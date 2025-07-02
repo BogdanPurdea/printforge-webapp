@@ -15,7 +15,7 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [X] Learn: Error boundaries, try/catch in React
 
 ### 3. Responsive Navigation
-- [ ] Make header mobile-friendly with hamburger menu
+- [X] Make header mobile-friendly with hamburger menu
 - [ ] Add mobile breakpoints with Tailwind
 - [ ] Learn: Mobile-first design, Tailwind responsive utilities
 
