@@ -19,17 +19,21 @@ export default async function ModelDetailPage({ params }: ModelDetailPageProps) 
     const model = await fetchModelDetails(id);
 
     return (
-        <section className="flex min-h-screen flex-row items-center justify-between p-30">
-            <img src={model.image} alt={model.name} className="w-full max-w-md mb-6 mr-10 ml-10" />
-            <div className="flex flex-col items-start justify-start max-w-md">
-            <div className="mt-4 flex items-center justify-between">
-                <FaRegHeart className="w-5 h-5 text-gray-400" aria-hidden="true" />
-                <span className="text-sm text-gray-500 ml-1">{model.likes}</span>
-            </div>
-            <h1 className="text-4xl font-bold mb-4 mt-4">{model.name}</h1>
-            <Pill className="bg-blue-100 text-blue-800">{model.category}</Pill>
-            <p className="text-lg mb-4 mt-4">{model.description}</p>
-            <p className="text-sm text-gray-500">Added on {new Date(model.dateAdded).toLocaleDateString()}</p>
+        <section className="flex flex-col md:flex-row min-h-screen items-center justify-between px-4 py-8 md:p-20 gap-8">
+            <img
+                src={model.image}
+                alt={model.name}
+                className="w-full max-w-xs md:max-w-md mb-6 md:mb-0 md:mr-10 md:ml-10 rounded-lg shadow"
+            />
+            <div className="flex flex-col items-center md:items-start justify-start w-full max-w-md">
+                <div className="mt-4 flex items-center justify-center md:justify-between w-full">
+                    <FaRegHeart className="w-5 h-5 text-gray-400" aria-hidden="true" />
+                    <span className="text-sm text-gray-500 ml-1">{model.likes}</span>
+                </div>
+                <h1 className="text-2xl md:text-4xl font-bold mb-4 mt-4 text-center md:text-left">{model.name}</h1>
+                <Pill className="bg-blue-100 text-blue-800 mb-4">{model.category}</Pill>
+                <p className="text-base md:text-lg mb-4 mt-4 text-center md:text-left">{model.description}</p>
+                <p className="text-sm text-gray-500 text-center md:text-left">Added on {new Date(model.dateAdded).toLocaleDateString()}</p>
             </div>
         </section>
     )

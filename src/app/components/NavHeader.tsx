@@ -31,7 +31,7 @@ export default function NavHeader() {
                         alt="PrintForge Logo"
                         width={199}
                         height={172}
-                        className="block md:hidden h-8 mx-4"
+                        className="block md:hidden h-8"
                     />
                 </div>
             </Link>
@@ -68,11 +68,5 @@ export default function NavHeader() {
 
 /* Add this to your global CSS or Tailwind config for the animation */
 /*
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fadeInDown {
-  animation: fadeInDown 0.3s ease;
-}
+
 */
