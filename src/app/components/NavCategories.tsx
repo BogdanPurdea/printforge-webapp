@@ -3,7 +3,7 @@
 import { getAllCategories } from "@/app/lib/categories";
 import { Category } from "../types/Category";
 import NavLink from "../components/NavLink";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const getCategories = async (): Promise<Category[]> => {
@@ -19,6 +19,9 @@ const getCategories = async (): Promise<Category[]> => {
 export default function NavCategories() {
     const [categories, setCategories] = useState<Category[]>([]);
     const pathname = usePathname();
+    const searchParams = useSearchParams();
+    const sort = searchParams.get("sort");
+    console.log(typeof sort);
     const isActive = (href: string): boolean => pathname === href;
     useEffect(() => {
         const fetchCategories = async () => {
@@ -36,12 +39,15 @@ export default function NavCategories() {
             <div className="relative">
                 <nav className="sticky top-0 z-10 w-full bg-white border-b border-gray-400 md:fixed md:w-64 md:top-1/2 md:-translate-y-1/2 md:border-none">
                     <ul className="flex px-1 md:px-0 py-3 space-x-4 whitespace-nowrap md:flex-col md:p-0 md:space-x-0 md:space-y-3 overflow-x-auto md:overflow-x-visible scrollbar-thin scrollbar-thumb-orange-accent scrollbar-track-gray-200 md:scrollbar-none">
-                        <NavLink href="/3d-models" isActive={isActive("/3d-models")}> All </NavLink>
+                        <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}> All </NavLink>
                         {
                             categories.map((category: Category) =>
                                 <NavLink
                                     key={category.slug}
-                                    href={`/3d-models/categories/${category.slug}`}
+                                    href={{
+                                        pathname: `/3d-models/categories/${category.slug}`,
+                                        query: sort ? { sort } : undefined
+                                    }}
                                     isActive={isActive(`/3d-models/categories/${category.slug}`)}
                                 > {category.displayName} </NavLink>
                             )

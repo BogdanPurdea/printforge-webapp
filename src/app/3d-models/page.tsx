@@ -16,13 +16,12 @@ const getAllModels = async (): Promise<Model[]> => {
 };
 
 export default async function ModelsPage({ searchParams }: ModelsPageProps) {
-  const query = (await searchParams)?.query;
   const models = await getAllModels();
 
   return (
     <section>
       <ModelsGridErrorBoundary >
-        <ModelsGrid title="3D Models" models={models} filterQuery={query} />
+        <ModelsGrid title="3D Models" models={models} searchParams={searchParams} />
       </ModelsGridErrorBoundary>
     </section>
   );

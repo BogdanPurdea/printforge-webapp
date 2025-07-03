@@ -3,6 +3,7 @@ export type CategoryPageProps = {
         categoryName: string;
     }>,
     searchParams: Promise<{
-        query?: string;
-    }>,
+        sort?: "date" | "likes" | "alpha"
+        filter?: string,
+    }>
 }

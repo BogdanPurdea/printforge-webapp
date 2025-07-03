@@ -1,6 +1,7 @@
 import { ModelCardSkeleton } from "@/app/components/ModelCardSkeleton";
 import Skeleton from "react-loading-skeleton";
-import SearchForm from "../components/SearchForm";
+import SearchForm from "./SearchForm";
+import SortForm from "./SortForm";
 
 export default function ModelsGridSkeleton() {
     return (
@@ -9,6 +10,7 @@ export default function ModelsGridSkeleton() {
                 <div className="w-full md:w-auto mt-[31px] md:mt-0 flex justify-center md:flex-1">
                     <Skeleton height={50} width={250} className="mb-4" />
                 </div>
+                <SortForm />
                 <SearchForm/>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">

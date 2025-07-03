@@ -1,5 +1,8 @@
 export type NavLinkProps = {
-    href: string,
+    href: {
+        pathname: string,
+        query?: { [key: string]: string | string[] }
+    },
     isActive?: boolean,
     children: React.ReactNode,
     onClick?: () => void

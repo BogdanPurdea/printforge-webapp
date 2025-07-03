@@ -37,8 +37,8 @@ export default function NavHeader() {
             </Link>
             {/* Desktop nav */}
             <ul className="hidden md:flex space-x-10 p-4">
-                <NavLink href="/3d-models" isActive={isActive("/3d-models")}>3D Models</NavLink>
-                <NavLink href="/about" isActive={isActive("/about")}>About</NavLink>
+                <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}>3D Models</NavLink>
+                <NavLink href={{pathname: "/about"}} isActive={isActive("/about")}>About</NavLink>
             </ul>
             {/* Hamburger icon for mobile */}
             <button
@@ -51,12 +51,12 @@ export default function NavHeader() {
             {/* Mobile menu */}
             {isMenuOpen && (
                 <ul className="absolute top-14 right-4 w-48 bg-white text-black flex flex-col items-end space-y-4 py-4 px-6 shadow-2xl md:hidden z-50 rounded-lg animate-fadeInDown border-2" style={{ borderColor: 'var(--color-orange-accent)' }}>
-                    <NavLink href="/3d-models" isActive={isActive("/3d-models")}
+                    <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}
                         onClick={() => setIsMenuOpen(false)}>
                         3D Models
                     </NavLink>
                     <hr className="w-full border-t-2" style={{ borderColor: 'var(--color-orange-accent)' }} />
-                    <NavLink href="/about" isActive={isActive("/about")}
+                    <NavLink href={{pathname: "/about"}} isActive={isActive("/about")}
                         onClick={() => setIsMenuOpen(false)}>
                         About
                     </NavLink>
@@ -65,8 +65,3 @@ export default function NavHeader() {
         </nav>
     )
 }
-
-/* Add this to your global CSS or Tailwind config for the animation */
-/*
-
-*/
