@@ -3,7 +3,7 @@
 import { ModelsGridProps } from "@/app/types/ModelsGridProps";
 import ModelCard from "@/app/components/ModelCard";
 import { Model } from "@/app/types/Model";
-import SortForm from "./SortForm";
+import SortControls from "./SortControls";
 import SearchForm from '@/app/components/SearchForm';
 import { useSearchParams } from "next/navigation";
 
@@ -35,7 +35,7 @@ export default function ModelsGrid({ title, models, onLikeChange }: ModelsGridPr
         <section className="px-6 md:px-24 py-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4 max-w-7xl mx-auto">
                 <h1 className="text-2xl md:text-4xl font-bold mb-4 md:mb-0 text-center md:text-left">{title}</h1>
-                <SortForm />
+                <SortControls />
                 <SearchForm filterQuery={filterQuery} />
             </div>
             {sortedModels.length === 0 && filterQuery ? (

@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter, usePathname } from "next/navigation"
 
-export default function SortForm() {
+export default function SortControls() {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const router = useRouter();
@@ -15,7 +15,7 @@ export default function SortForm() {
     }
 
     return (
-        <form className="flex gap-2 justify-center md:justify-start">
+        <div className="flex gap-2 justify-center md:justify-start">
             <button
                 type="button"
                 className={`px-3 py-1 rounded ${sortBy === "date" ? "bg-orange-400 text-white" : "bg-gray-200"}`}
@@ -37,6 +37,6 @@ export default function SortForm() {
             >
                 A-Z
             </button>
-        </form>
+        </div>
     )
 }

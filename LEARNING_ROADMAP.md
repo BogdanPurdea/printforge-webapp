@@ -7,7 +7,7 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 ### 1. Loading States
 - [X] Implement skeleton loaders for model cards
 - [X] Add loading spinners for page transitions
-- [\] Learn: React Suspense
+- [/] Learn: React Suspense
 
 ### 2. Error Boundaries
 - [X] Add React error boundaries for better error handling
@@ -43,9 +43,11 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [X] Learn: localStorage API, custom hooks
 
 ### 8. Pagination
-- [ ] Implement pagination or infinite scroll for model list
-- [ ] Add page navigation controls
-- [ ] Learn: Data slicing, URL parameters, useRouter
+- [X] Implement pagination or infinite scroll for model list
+- [X] Add page navigation controls
+- [X] Implement server-side pagination for models page and category/[category-name] page
+- [ ] Implement client-side pagination for liked page (useRouter)
+- [/] Learn: Data slicing, URL parameters, useRouter
 
 ### 9. Dark Mode Toggle
 - [ ] Learn CSS variables and theme switching
