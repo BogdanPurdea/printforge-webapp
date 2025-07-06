@@ -21,7 +21,6 @@ export default function NavCategories() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const sort = searchParams.get("sort");
-    console.log(typeof sort);
     const isActive = (href: string): boolean => pathname === href;
     useEffect(() => {
         const fetchCategories = async () => {

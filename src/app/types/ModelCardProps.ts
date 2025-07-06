@@ -1,5 +1,6 @@
 import { Model } from './Model';
 
 export type ModelCardProps = {
-    model: Model
+    model: Model,
+    onLikeChange?: (modelId: number) => void
 }

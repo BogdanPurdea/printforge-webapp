@@ -21,7 +21,7 @@ export default async function ModelsPage({ searchParams }: ModelsPageProps) {
   return (
     <section>
       <ModelsGridErrorBoundary >
-        <ModelsGrid title="3D Models" models={models} searchParams={searchParams} />
+        <ModelsGrid title="3D Models" models={models} />
       </ModelsGridErrorBoundary>
     </section>
   );

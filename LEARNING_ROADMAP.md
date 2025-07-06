@@ -37,10 +37,10 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 ## Intermediate Features (Skill Building)
 
 ### 7. Model Favorites
-- [ ] Add local storage to save favorite models
-- [ ] Heart icon toggle on model cards
-- [ ] Favorites page to view saved models
-- [ ] Learn: localStorage API, custom hooks
+- [X] Add local storage to save favorite models
+- [X] Heart icon toggle on model cards
+- [X] Favorites page to view saved models
+- [X] Learn: localStorage API, custom hooks
 
 ### 8. Pagination
 - [ ] Implement pagination or infinite scroll for model list

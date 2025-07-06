@@ -38,6 +38,7 @@ export default function NavHeader() {
             {/* Desktop nav */}
             <ul className="hidden md:flex space-x-10 p-4">
                 <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}>3D Models</NavLink>
+                <NavLink href={{pathname: "/liked"}} isActive={isActive("/liked")}>Liked</NavLink>
                 <NavLink href={{pathname: "/about"}} isActive={isActive("/about")}>About</NavLink>
             </ul>
             {/* Hamburger icon for mobile */}
@@ -54,6 +55,11 @@ export default function NavHeader() {
                     <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}
                         onClick={() => setIsMenuOpen(false)}>
                         3D Models
+                    </NavLink>
+                    <hr className="w-full border-t-2" style={{ borderColor: 'var(--color-orange-accent)' }} />
+                    <NavLink href={{pathname: "/liked"}} isActive={isActive("/liked")}
+                        onClick={() => setIsMenuOpen(false)}>
+                        Liked
                     </NavLink>
                     <hr className="w-full border-t-2" style={{ borderColor: 'var(--color-orange-accent)' }} />
                     <NavLink href={{pathname: "/about"}} isActive={isActive("/about")}
