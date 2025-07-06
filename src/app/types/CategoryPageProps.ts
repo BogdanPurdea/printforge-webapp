@@ -1,9 +1,10 @@
 export type CategoryPageProps = {
-    params: Promise<{
+    params: {
         categoryName: string;
-    }>,
-    searchParams: Promise<{
-        sort?: "date" | "likes" | "alpha"
-        filter?: string,
-    }>
+    },
+    searchParams: {
+        sort?: "date" | "likes" | "alpha";
+        filter?: string;
+        page?: string;
+    }
 }

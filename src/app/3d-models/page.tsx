@@ -1,28 +1,26 @@
 import { getModels } from '../lib/models';
-import { Model } from '../types/Model';
 import ModelsGrid from '../components/ModelsGrid';
 import { ModelsPageProps } from '../types/ModelsPageProps';
 import ModelsGridErrorBoundary from '../components/ModelsGridErrorBoundary';
-
-
-const getAllModels = async (): Promise<Model[]> => {
-  try {
-    const models = await getModels();
-    return models;
-  } catch (error) {
-    console.error('Error fetching models:', error);
-    throw error;
-  }
-};
+import PaginationControls from '../components/PaginationControls';
 
 export default async function ModelsPage({ searchParams }: ModelsPageProps) {
-  const models = await getAllModels();
+  const pageStr = (await searchParams).page ?? '1';
+  let pageNum = parseInt(pageStr);
+  if (isNaN(pageNum) || pageNum < 1) {
+    pageNum = 1;
+  }
+  const { models, totalPages } = await getModels({ page: pageNum });
 
   return (
     <section>
       <ModelsGridErrorBoundary >
         <ModelsGrid title="3D Models" models={models} />
       </ModelsGridErrorBoundary>
+      <PaginationControls 
+        currentPage={pageNum}
+        totalPages={totalPages}
+      />
     </section>
   );
 }

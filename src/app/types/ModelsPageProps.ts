@@ -1,6 +1,7 @@
 export type ModelsPageProps = {
-    searchParams: Promise<{
+    searchParams: {
+        page?: string,
         sort?: "date" | "likes" | "alpha"
         filter?: string,
-    }>
+    }
 }

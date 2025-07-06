@@ -3,14 +3,18 @@ import type { Model } from "../types/Model"
 import type { GetModelsParams } from "../types/GetModelsParams"
 
 
-export async function getModels({ category }: GetModelsParams = {}): Promise<Model[]> {
+export async function getModels({ category, page = 1, limit = 9 }: GetModelsParams = {}): Promise<{ models: Model[], totalPages: number }> {
   try {
     let filteredModels = [...modelsData];
-    if(category) {
-      filteredModels = modelsData.filter((model: Model) => 
+    if (category) {
+      filteredModels = modelsData.filter((model: Model) =>
         model.category === category);
     }
-    return filteredModels;
+    const totalPages = Math.ceil(filteredModels.length / limit);
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+    const models = filteredModels.slice(startIndex, endIndex);
+    return { models, totalPages };
   } catch (error) {
     console.error("Failed to get models:", error);
     throw new Error("Failed to get models");

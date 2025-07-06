@@ -18,7 +18,7 @@ export default function LikedModelsPage() {
         const fetchModels = async () => {
             try {
                 setIsLoading(true);
-                const models = await getModels();
+                const { models } = await getModels();
                 setSourceModels(models);
             } catch (error) {
                 console.error('Error fetching models:', error);

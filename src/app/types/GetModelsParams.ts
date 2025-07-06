@@ -1,3 +1,5 @@
 export type GetModelsParams = {
-    category?: string
+    category?: string;
+    page?: number;
+    limit?: number;
 }
