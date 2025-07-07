@@ -25,7 +25,7 @@ export default function PaginationControls({ currentPage, totalPages, baseUrl = 
 
       <Link 
         href={`${baseUrl}?page=${nextPage}`}
-        className={`px-4 py-2 border rounded-lg ${!hasNextPage ? 'pointer-events-none text-gray-400 bg-gray-800' : 'text-white bg-gray-700 hover:bg-gray-600'}`}
+        className={`px-4 py-2 border rounded-lg ${!hasNextPage ? 'pointer-events-none text-muted-foreground bg-muted' : 'text-primary-foreground bg-primary hover:bg-primary/90'}`}
         aria-disabled={!hasNextPage}
         tabIndex={!hasNextPage ? -1 : undefined}
       >

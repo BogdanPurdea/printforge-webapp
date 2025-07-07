@@ -44,7 +44,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
         return (
             <div className="flex flex-col items-center justify-center min-h-[60vh] text-center gap-4">
                 <h2 className="text-2xl font-bold text-red-600">Failed to load model</h2>
-                <p className="text-gray-700 mb-4">{error}</p>
+                <p className="text-foreground text-base md:text-lg mt-6 text-center md:text-left">{error}</p>
             </div>
         );
     }
@@ -68,7 +68,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
                 <h1 className="text-2xl md:text-4xl font-bold mb-4 mt-4 text-center md:text-left">{model.name}</h1>
                 <Pill className="bg-blue-100 text-blue-800 mb-4">{model.category}</Pill>
                 <p className="text-base md:text-lg mb-4 mt-4 text-center md:text-left">{model.description}</p>
-                <p className="text-sm text-gray-500 text-center md:text-left">Added on {new Date(model.dateAdded).toLocaleDateString()}</p>
+                <p className="text-sm text-muted-foreground text-center md:text-left">Added on {new Date(model.dateAdded).toLocaleDateString()}</p>
             </div>
         </section>
     )

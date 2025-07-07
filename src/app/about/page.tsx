@@ -44,12 +44,12 @@ export default function About() {
             <hr className="w-full border-gray-300 my-6 md:my-8" />
             {/* Vision Section */}
             <section className="mt-8 md:mt-12 w-full max-w-2xl">
-                <h2 className="text-xl md:text-2xl font-bold mb-4 text-orange-accent text-center md:text-left">Our vision</h2>
-                <p className="text-base md:text-lg mb-4 text-center md:text-left">
+                <h2 className="text-xl md:text-2xl font-bold mb-4 text-primary text-center md:text-left">Our vision</h2>
+                <p className="text-base md:text-lg mb-4 text-center md:text-left text-foreground">
                     At PrintForge, we believe that 3D printing is revolutionizing the way we create, prototype, and manufacture. Our platform serves as a bridge between designers and makers, enabling the sharing
                     of knowledge and creativity that pushes the boundaries of what's possible with 3D printing.
                 </p>
-                <p className="text-base md:text-lg mb-4 text-center md:text-left">
+                <p className="text-base md:text-lg mb-4 text-center md:text-left text-foreground">
                     Whether you're a hobbyist looking for your next weekend project, an educator seeking teaching materials, or a professional designer wanting to share your creations, PrintForge provides the tools and community to support
                     your journey in 3D printing.
                 </p>

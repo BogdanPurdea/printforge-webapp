@@ -18,21 +18,21 @@ export default function SortControls() {
         <div className="flex gap-2 justify-center md:justify-start">
             <button
                 type="button"
-                className={`px-3 py-1 rounded ${sortBy === "date" ? "bg-orange-400 text-white" : "bg-gray-200"}`}
+                className={`px-3 py-1 rounded ${sortBy === "date" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}
                 onClick={() => handleSortChange("date")}
             >
                 Date
             </button>
             <button
                 type="button"
-                className={`px-3 py-1 rounded ${sortBy === "likes" ? "bg-orange-400 text-white" : "bg-gray-200"}`}
+                className={`px-3 py-1 rounded ${sortBy === "likes" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}
                 onClick={() => handleSortChange("likes")}
             >
                 Likes
             </button>
             <button
                 type="button"
-                className={`px-3 py-1 rounded ${sortBy === "alpha" ? "bg-orange-400 text-white" : "bg-gray-200"}`}
+                className={`px-3 py-1 rounded ${sortBy === "alpha" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}
                 onClick={() => handleSortChange("alpha")}
             >
                 A-Z

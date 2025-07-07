@@ -53,7 +53,7 @@ export default function LikedModelsPage() {
                 <div className="text-center max-w-7xl mx-auto mt-10">
                     <h1 className="text-2xl md:text-4xl font-bold mb-4">My Liked Models</h1>
                     <p className="text-lg text-gray-600">You haven't liked any models yet.</p>
-                    <p className="text-md text-gray-500 mt-2">Click the heart icon on a model to save it here.</p>
+                    <p className="text-md text-muted-foreground mt-2">Click the heart icon on a model to save it here.</p>
                 </div>
             ) : (
                 <ModelsGrid title="My Liked Models" models={displayedModels} onLikeChange={handleLikeChange} />

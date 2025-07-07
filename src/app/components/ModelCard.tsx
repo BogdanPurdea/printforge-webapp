@@ -24,7 +24,7 @@ export default function ModelCard({ model, onLikeChange }: ModelCardProps) {
     };
 
     return (
-        <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden h-full flex flex-col">
+        <div className="bg-card rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden h-full flex flex-col">
             <Link href={`/3d-models/${model.id}`} className="block" aria-labelledby={`model-${model.id}-title`}>
                 <img src={model.image} alt={model.name} className="w-full h-48 object-cover" />
             </Link>
@@ -32,15 +32,15 @@ export default function ModelCard({ model, onLikeChange }: ModelCardProps) {
                 <Link href={`/3d-models/${model.id}`} className="block" aria-labelledby={`model-${model.id}-title`}>
                     <h2 id={`model-${model.id}-title`} className="text-lg font-semibold mb-2 text-gray-900 hover:text-orange-accent transition-colors">{model.name}</h2>
                 </Link>
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2 flex-grow">{model.description}</p>
+                <p className="text-sm text-muted-foreground mb-3 line-clamp-2 flex-grow">{model.description}</p>
                 <div className="flex items-center justify-between mt-auto">
-                    <Pill className="bg-gray-100 text-gray-700 border border-gray-200">{model.category}</Pill>
+                    <Pill>{model.category}</Pill>
                     <div className="flex items-center gap-2">
                         <LikeButton
                             isLiked={isLiked(model.id)}
                             onClick={handleLikeClick}
                         />
-                        <span className="text-sm text-gray-500">{model.likes}</span>
+                        <span className="text-sm text-muted-foreground">{model.likes}</span>
                     </div>
                 </div>
             </div>

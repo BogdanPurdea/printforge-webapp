@@ -1,6 +1,7 @@
 import "./globals.css";
 import NavHeader from "./components/NavHeader";
 import { Albert_Sans, Montserrat_Alternates } from "next/font/google";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const albertSans = Albert_Sans({
     subsets: ['latin'],
@@ -22,8 +23,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${albertSans.className} ${montserratAlternates.variable}`}>
       <body>
-        <NavHeader />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NavHeader />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

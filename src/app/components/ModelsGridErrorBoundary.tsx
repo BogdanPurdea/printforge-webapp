@@ -20,7 +20,7 @@ export default function ModelsGridErrorBoundary({ children, fallback }: ModelsGr
                     </p>
                     <button
                         onClick={reset}
-                        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                        className="bg-primary text-primary-foreground px-4 py-2 rounded hover:bg-primary/90"
                     >
                         Try Again
                     </button>

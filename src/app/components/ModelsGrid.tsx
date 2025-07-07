@@ -41,7 +41,7 @@ export default function ModelsGrid({ title, models, onLikeChange }: ModelsGridPr
             {sortedModels.length === 0 && filterQuery ? (
                  <div className="text-center max-w-7xl mx-auto">
                     <p className="text-lg text-gray-600">No models found for your search.</p>
-                    <p className="text-md text-gray-500 mt-2">Try a different search term.</p>
+                    <p className="text-md text-muted-foreground mt-2">Try a different search term.</p>
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">

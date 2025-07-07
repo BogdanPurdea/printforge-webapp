@@ -46,14 +46,14 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [X] Implement pagination or infinite scroll for model list
 - [X] Add page navigation controls
 - [X] Implement server-side pagination for models page and category/[category-name] page
-- [ ] Implement client-side pagination for liked page (useRouter)
+- [ ] Implement client-side pagination for liked page
 - [/] Learn: Data slicing, URL parameters, useRouter
 
 ### 9. Dark Mode Toggle
-- [ ] Learn CSS variables and theme switching
-- [ ] Add toggle button in header
-- [ ] Persist theme preference
-- [ ] Learn: CSS custom properties, system preferences
+- [X] Learn CSS variables and theme switching
+- [X] Add toggle button in header
+- [X] Persist theme preference
+- [X] Learn: CSS custom properties, system preferences
 
 ### 10. Model Upload Form
 - [ ] Practice form handling and validation

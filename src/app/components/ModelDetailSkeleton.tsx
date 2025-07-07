@@ -3,7 +3,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function ModelDetailSkeleton() {
     return (
-        <section className="flex flex-col md:flex-row min-h-screen items-center justify-between px-4 py-8 md:p-20 gap-8">
+        <section className="flex flex-col md:flex-row min-h-screen items-center justify-between px-4 py-8 md:p-20 gap-8 bg-background">
             {/* Image Skeleton */}
             <div className="w-full max-w-xs md:max-w-md mb-6 md:mb-0 md:mr-10 md:ml-10">
                 <Skeleton height={400} className="rounded-lg shadow" />

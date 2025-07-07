@@ -11,7 +11,7 @@ export default function LikeButton({ isLiked, onClick }: LikeButtonProps) {
             aria-label={isLiked ? "Unlike this model" : "Like this model"}
         >
             {isLiked ? (
-                <FaHeart className="w-5 h-5 text-orange-accent" />
+                <FaHeart className="w-5 h-5 text-primary" />
             ) : (
                 <FaRegHeart className="w-5 h-5" />
             )}
