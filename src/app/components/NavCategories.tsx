@@ -34,26 +34,22 @@ export default function NavCategories() {
         fetchCategories();
     }, []);
     return (
-        <aside className="sticky top-0 z-10 w-full md:fixed md:w-64 md:top-1/2 md:-translate-y-1/2 md:border-none">
-            <div className="relative">
-                <nav className="sticky top-0 z-10 w-full bg-background border-b border-border md:fixed md:w-64 md:top-1/2 md:-translate-y-1/2 md:border-none">
-                    <ul className="flex px-1 md:px-0 py-3 space-x-4 whitespace-nowrap md:flex-col md:p-0 md:space-x-0 md:space-y-3 overflow-x-auto md:overflow-x-visible scrollbar-thin scrollbar-thumb-primary scrollbar-track-secondary md:scrollbar-none">
-                        <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}> All </NavLink>
-                        {
-                            categories.map((category: Category) =>
-                                <NavLink
-                                    key={category.slug}
-                                    href={{
-                                        pathname: `/3d-models/categories/${category.slug}`,
-                                        query: sort ? { sort } : undefined
-                                    }}
-                                    isActive={isActive(`/3d-models/categories/${category.slug}`)}
-                                > {category.displayName} </NavLink>
-                            )
-                        }
-                    </ul>
-                </nav>
-            </div>
-        </aside>
+        <nav className="sticky top-0 z-10 w-full bg-background border-b border-primary md:fixed md:w-64 md:top-1/2 md:-translate-y-1/2 md:border-b-0 md:border-r md:h-auto md:max-h-[90vh] md:overflow-y-auto md:p-4">
+            <ul className="flex px-1 md:px-0 py-3 space-x-4 whitespace-nowrap md:flex-col md:p-0 md:space-x-0 md:space-y-3 overflow-x-auto md:overflow-x-visible scrollbar-thin scrollbar-thumb-primary scrollbar-track-secondary md:scrollbar-none">
+                <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}> All </NavLink>
+                {
+                    categories.map((category: Category) =>
+                        <NavLink
+                            key={category.slug}
+                            href={{
+                                pathname: `/3d-models/categories/${category.slug}`,
+                                query: sort ? { sort } : undefined
+                            }}
+                            isActive={isActive(`/3d-models/categories/${category.slug}`)}
+                        > {category.displayName} </NavLink>
+                    )
+                }
+            </ul>
+        </nav>
     )
 }
