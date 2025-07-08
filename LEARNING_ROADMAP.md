@@ -56,10 +56,10 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [X] Learn: CSS custom properties, system preferences
 
 ### 10. Model Upload Form
-- [ ] Practice form handling and validation
-- [ ] Add image upload preview
-- [ ] Form submission with success/error states
-- [ ] Learn: React Hook Form, form validation, file handling
+- [X] Practice form handling and validation
+- [X] Add image upload preview
+- [X] Form submission with success/error states
+- [X] Learn: React Hook Form, form validation, file handling
 
 ### 11. User Profiles
 - [ ] Add mock user system with profile pages

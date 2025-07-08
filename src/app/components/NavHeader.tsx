@@ -15,7 +15,7 @@ export default function NavHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const isActive = (href: string): boolean => pathname === href || pathname.includes(href);
     return (
-        <nav className='bg-card text-card-foreground flex items-center justify-between p-4 shadow-md'>
+        <nav className='relative z-20 bg-card text-card-foreground flex items-center justify-between p-4 shadow-md'>
             <Link href="/">
                 <div className='relative w-40'>
                     {/* Desktop logo - hidden on mobile, shown on md and up */}
