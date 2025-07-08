@@ -25,7 +25,7 @@ export function ThemeSwitcher() {
   return (
     <Button
       onClick={toggleTheme}
-      className="p-2 rounded-md hover:bg-gray-900 dark:hover:bg-gray-700 transition-colors"
+      className="p-2 rounded-md"
       aria-label="Toggle theme"
     >
       {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
