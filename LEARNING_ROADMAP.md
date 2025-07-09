@@ -62,10 +62,10 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [X] Learn: React Hook Form, form validation, file handling
 
 ### 11. User Profiles
-- [ ] Add mock user system with profile pages
-- [ ] User avatar and bio sections
-- [ ] User's uploaded models page
-- [ ] Learn: Dynamic routing, user state management
+- [X] Add mock user system with profile pages
+- [X] User avatar and bio sections
+- [X] User's uploaded models page
+- [X] Learn: Dynamic routing, user state management
 
 ### 12. Comments System
 - [ ] Add commenting on individual models

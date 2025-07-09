@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+    "bio": "3D printing enthusiast and designer, loves creating functional prints for everyday use."
+  },
+  {
+    "id": 2,
+    "name": "John Smith",
+    "email": "john.smith@example.com",
+    "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+    "bio": "Mechanical engineer by day, 3D printing hobbyist by night. Focuses on mechanical parts and gadgets."
+  },
+  {
+    "id": 3,
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "avatar": "https://i.pravatar.cc/150?u=a04258114e29026702d",
+    "bio": "Artist and sculptor exploring the intersection of art and technology through 3D printing."
+  },
+  {
+    "id": 4,
+    "name": "Robert Brown",
+    "email": "robert.brown@example.com",
+    "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026708c",
+    "bio": "Loves to tinker and create miniatures for tabletop gaming. Always looking for the next cool model to print."
+  }
+]

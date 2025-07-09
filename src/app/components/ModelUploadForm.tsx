@@ -16,9 +16,17 @@ import {
 } from "@/app/components/ui/select"
 import { ModelUploadFormProps } from '@/app/types/ModelUploadFormProps';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
-export default function ModelUploadForm({ categories }: ModelUploadFormProps) {
-    const { register, handleSubmit, watch, control, formState: { errors } } = useForm();
+interface ModelFormData {
+    name: string;
+    description: string;
+    category: string;
+    image: FileList;
+}
+
+export default function ModelUploadForm({ categories, uploaderId }: ModelUploadFormProps) {
+    const { register, handleSubmit, watch, control, formState: { errors } } = useForm<ModelFormData>();
     const router = useRouter();
     const [imagePreview, setImagePreview] = useState<string | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,7 +42,7 @@ export default function ModelUploadForm({ categories }: ModelUploadFormProps) {
         }
     }, [imageFile])
 
-    const onSubmit = async (data: any) => {
+    const onSubmit = async (data: ModelFormData) => {
         setIsSubmitting(true);
         setStatusMessage('Uploading...');
         const formData = new FormData();
@@ -43,6 +51,9 @@ export default function ModelUploadForm({ categories }: ModelUploadFormProps) {
         formData.append('description', data.description);
         formData.append('category', data.category);
         formData.append('image', data.image[0]);
+        if (uploaderId) {
+            formData.append('uploaderId', uploaderId.toString());
+        }
 
         try {
             const response = await fetch('/api/models', {
@@ -52,7 +63,7 @@ export default function ModelUploadForm({ categories }: ModelUploadFormProps) {
 
             if (response.ok) {
                 setStatusMessage('Upload successful! Redirecting...');
-                router.push('/3d-models');
+                router.push('/users/3');
             } else {
                 const errorData = await response.json();
                 setStatusMessage(`Error: ${errorData.message || 'Upload failed.'}`);
@@ -126,7 +137,7 @@ export default function ModelUploadForm({ categories }: ModelUploadFormProps) {
             {imagePreview && (
                 <div>
                     <p className="block text-sm font-medium text-gray-700 dark:text-gray-300">Image Preview</p>
-                    <img src={imagePreview} alt="Image Preview" className="mt-2 h-48 w-auto rounded-lg" />
+                    <Image src={imagePreview} alt="Image Preview" width={192} height={192} className="mt-2 h-48 w-auto rounded-lg" />
                 </div>
             )}
             <Button type="submit" disabled={isSubmitting}>

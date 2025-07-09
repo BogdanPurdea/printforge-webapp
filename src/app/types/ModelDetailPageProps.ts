@@ -1,5 +1,3 @@
 export type ModelDetailPageProps = {
-    params: Promise<{
-        id: string
-    }>
+    params: Promise<{ id: string }>
 }

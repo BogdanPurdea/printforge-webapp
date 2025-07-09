@@ -1,6 +1,6 @@
-export type CategoryPageProps = {
+export type UserProfilePageParams = {
     params: {
-        categoryName: string;
+        id: string;
     };
     searchParams: {
         page?: string;

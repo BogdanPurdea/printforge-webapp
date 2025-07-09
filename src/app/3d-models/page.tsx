@@ -10,7 +10,8 @@ export default async function ModelsPage({ searchParams }: ModelsPageProps) {
   if (isNaN(pageNum) || pageNum < 1) {
     pageNum = 1;
   }
-  const { models, totalPages } = await getModels({ page: pageNum });
+  const query = (await searchParams).query ?? '';
+  const { models, totalPages } = await getModels({ page: pageNum, query });
 
   return (
     <section>

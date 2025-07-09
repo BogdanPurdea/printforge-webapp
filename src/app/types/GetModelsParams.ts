@@ -1,5 +1,7 @@
 export type GetModelsParams = {
-    category?: string;
-    page?: number;
-    limit?: number;
+    category?: string
+    uploaderId?: number
+    page?: number
+    limit?: number
+    filterQuery?: string
 }

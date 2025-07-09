@@ -3,6 +3,7 @@ import Form from "next/form";
 import { SearchFormProps } from "@/app/types/SearchFormProps";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { Input } from "./ui/input";
 
 export default function SearchForm({ filterQuery }: SearchFormProps) {
     const [input, setInput] = useState<string>(filterQuery || "");
@@ -22,7 +23,7 @@ export default function SearchForm({ filterQuery }: SearchFormProps) {
 
     return (
         <Form ref={formRef} className="mb-8 mt-6 flex justify-center px-6" action={pathname}>
-            <input
+            <Input
                 className="w-full max-w-md px-4 py-2 border border-input rounded-3xl focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary bg-background shadow-sm"
                 type="text"
                 name="filter"
@@ -30,7 +31,7 @@ export default function SearchForm({ filterQuery }: SearchFormProps) {
                 autoComplete="off"
                 value={input}
                 onChange={e => setInput(e.target.value)} />
-            <input type="hidden" name="sort" value={sort} />
+            <Input type="hidden" name="sort" value={sort} />
         </Form>
     )
 }

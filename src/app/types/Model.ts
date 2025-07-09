@@ -1,3 +1,4 @@
+
 export type Model = {
     id: number
     name: string
@@ -6,4 +7,6 @@ export type Model = {
     image: string
     category: string
     dateAdded: string
+    uploaderId: number
+    uploaderName?: string
 }

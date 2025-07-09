@@ -7,7 +7,7 @@ import SortControls from "./SortControls";
 import SearchForm from '@/app/components/SearchForm';
 import { useSearchParams } from "next/navigation";
 
-export default function ModelsGrid({ title, models, onLikeChange }: ModelsGridProps) {
+export default function ModelsGrid({ title, models }: ModelsGridProps) {
     const searchParams = useSearchParams();
     const filterQuery = searchParams.get('filter') || "";
     const sortBy = searchParams.get('sort') || "date";
@@ -46,7 +46,7 @@ export default function ModelsGrid({ title, models, onLikeChange }: ModelsGridPr
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
                     {sortedModels.map((model) => (
-                        <ModelCard key={model.id} model={model} onLikeChange={onLikeChange}/>
+                        <ModelCard key={model.id} model={model}/>
                     ))}
                 </div>
             )}

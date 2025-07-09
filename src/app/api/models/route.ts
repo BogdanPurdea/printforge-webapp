@@ -32,6 +32,7 @@ export async function POST(request: Request) {
         const description = data.get('description') as string;
         const category = data.get('category') as string;
         const image = data.get('image') as File;
+        const uploaderId = data.get('uploaderId') as string;
 
         if (!name || !description || !category || !image) {
             return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
@@ -57,6 +58,7 @@ export async function POST(request: Request) {
             likes: 0,
             image: `/models/${imageName}`, // Public path to the image
             dateAdded: new Date().toISOString(),
+            uploaderId: Number(uploaderId),
         };
 
         // Add the new model to the array and write back to the file

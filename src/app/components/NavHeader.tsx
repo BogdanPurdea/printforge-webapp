@@ -42,6 +42,7 @@ export default function NavHeader() {
                     <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}>3D Models</NavLink>
                     <NavLink href={{pathname: "/liked"}} isActive={isActive("/liked")}>Liked</NavLink>
                     <NavLink href={{pathname: "/about"}} isActive={isActive("/about")}>About</NavLink>
+                    <NavLink href={{pathname: "/users/3"}} isActive={isActive("/users/3")}>Profile</NavLink>
                 </ul>
                 <ThemeSwitcher />
             </div>
@@ -72,6 +73,11 @@ export default function NavHeader() {
                     <NavLink href={{pathname: "/about"}} isActive={isActive("/about")}
                         onClick={() => setIsMenuOpen(false)}>
                         About
+                    </NavLink>
+                    <hr className="w-full border-t-2" style={{ borderColor: 'var(--color-orange-accent)' }} />
+                    <NavLink href={{pathname: "/users/1"}} isActive={isActive("/users/1")}
+                        onClick={() => setIsMenuOpen(false)}>
+                        Profile
                     </NavLink>
                 </ul>
             )}

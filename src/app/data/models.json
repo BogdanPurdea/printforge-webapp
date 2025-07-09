@@ -6,7 +6,8 @@
     "likes": 1847,
     "image": "https://place-hold.it/300",
     "category": "toys-games",
-    "dateAdded": "2023-03-15T14:30:00Z"
+    "dateAdded": "2023-03-15T14:30:00Z",
+    "uploaderId": 1
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "likes": 456,
     "image": "https://place-hold.it/300",
     "category": "household",
-    "dateAdded": "2023-06-22T09:15:00Z"
+    "dateAdded": "2023-06-22T09:15:00Z",
+    "uploaderId": 2
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "likes": 1253,
     "image": "https://place-hold.it/300",
     "category": "props-cosplay",
-    "dateAdded": "2023-09-05T16:45:00Z"
+    "dateAdded": "2023-09-05T16:45:00Z",
+    "uploaderId": 3
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "likes": 892,
     "image": "https://place-hold.it/300",
     "category": "education",
-    "dateAdded": "2023-11-30T11:20:00Z"
+    "dateAdded": "2023-11-30T11:20:00Z",
+    "uploaderId": 4
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "likes": 345,
     "image": "https://place-hold.it/300",
     "category": "art",
-    "dateAdded": "2024-01-18T13:40:00Z"
+    "dateAdded": "2024-01-18T13:40:00Z",
+    "uploaderId": 1
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "likes": 567,
     "image": "https://place-hold.it/300",
     "category": "tools",
-    "dateAdded": "2024-03-07T10:25:00Z"
+    "dateAdded": "2024-03-07T10:25:00Z",
+    "uploaderId": 2
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "likes": 1456,
     "image": "https://place-hold.it/300",
     "category": "miniatures",
-    "dateAdded": "2024-05-12T15:50:00Z"
+    "dateAdded": "2024-05-12T15:50:00Z",
+    "uploaderId": 3
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "likes": 234,
     "image": "https://place-hold.it/300",
     "category": "fashion",
-    "dateAdded": "2024-07-25T08:35:00Z"
+    "dateAdded": "2024-07-25T08:35:00Z",
+    "uploaderId": 4
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "likes": 1789,
     "image": "https://place-hold.it/300",
     "category": "3d-printer",
-    "dateAdded": "2024-09-14T12:15:00Z"
+    "dateAdded": "2024-09-14T12:15:00Z",
+    "uploaderId": 1
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "likes": 445,
     "image": "https://place-hold.it/300",
     "category": "hobby-diy",
-    "dateAdded": "2024-11-03T17:40:00Z"
+    "dateAdded": "2024-11-03T17:40:00Z",
+    "uploaderId": 2
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "likes": 1234,
     "image": "https://place-hold.it/300",
     "category": "toys-games",
-    "dateAdded": "2023-02-28T14:20:00Z"
+    "dateAdded": "2023-02-28T14:20:00Z",
+    "uploaderId": 3
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "likes": 678,
     "image": "https://place-hold.it/300",
     "category": "household",
-    "dateAdded": "2023-05-17T11:30:00Z"
+    "dateAdded": "2023-05-17T11:30:00Z",
+    "uploaderId": 4
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "likes": 1567,
     "image": "https://place-hold.it/300",
     "category": "props-cosplay",
-    "dateAdded": "2023-08-09T16:05:00Z"
+    "dateAdded": "2023-08-09T16:05:00Z",
+    "uploaderId": 1
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "likes": 789,
     "image": "https://place-hold.it/300",
     "category": "education",
-    "dateAdded": "2023-10-22T09:45:00Z"
+    "dateAdded": "2023-10-22T09:45:00Z",
+    "uploaderId": 2
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "likes": 890,
     "image": "https://place-hold.it/300",
     "category": "art",
-    "dateAdded": "2024-01-05T15:25:00Z"
+    "dateAdded": "2024-01-05T15:25:00Z",
+    "uploaderId": 3
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "likes": 432,
     "image": "https://place-hold.it/300",
     "category": "tools",
-    "dateAdded": "2024-02-19T10:50:00Z"
+    "dateAdded": "2024-02-19T10:50:00Z",
+    "uploaderId": 4
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "likes": 1678,
     "image": "https://place-hold.it/300",
     "category": "miniatures",
-    "dateAdded": "2024-04-30T13:15:00Z"
+    "dateAdded": "2024-04-30T13:15:00Z",
+    "uploaderId": 1
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "likes": 567,
     "image": "https://place-hold.it/300",
     "category": "fashion",
-    "dateAdded": "2024-06-14T08:40:00Z"
+    "dateAdded": "2024-06-14T08:40:00Z",
+    "uploaderId": 2
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "likes": 1234,
     "image": "https://place-hold.it/300",
     "category": "3d-printer",
-    "dateAdded": "2024-08-27T12:55:00Z"
+    "dateAdded": "2024-08-27T12:55:00Z",
+    "uploaderId": 3
   },
   {
     "id": 20,
@@ -177,7 +196,8 @@
     "likes": 789,
     "image": "https://place-hold.it/300",
     "category": "hobby-diy",
-    "dateAdded": "2024-10-11T17:20:00Z"
+    "dateAdded": "2024-10-11T17:20:00Z",
+    "uploaderId": 4
   },
   {
     "id": 21,
@@ -186,7 +206,8 @@
     "likes": 1567,
     "image": "https://place-hold.it/300",
     "category": "toys-games",
-    "dateAdded": "2023-01-25T14:10:00Z"
+    "dateAdded": "2023-01-25T14:10:00Z",
+    "uploaderId": 1
   },
   {
     "id": 22,
@@ -195,7 +216,8 @@
     "likes": 890,
     "image": "https://place-hold.it/300",
     "category": "household",
-    "dateAdded": "2023-04-08T11:35:00Z"
+    "dateAdded": "2023-04-08T11:35:00Z",
+    "uploaderId": 2
   },
   {
     "id": 23,
@@ -204,7 +226,8 @@
     "likes": 1123,
     "image": "https://place-hold.it/300",
     "category": "props-cosplay",
-    "dateAdded": "2023-07-21T16:00:00Z"
+    "dateAdded": "2023-07-21T16:00:00Z",
+    "uploaderId": 3
   },
   {
     "id": 24,
@@ -213,7 +236,8 @@
     "likes": 678,
     "image": "https://place-hold.it/300",
     "category": "education",
-    "dateAdded": "2023-09-30T09:25:00Z"
+    "dateAdded": "2023-09-30T09:25:00Z",
+    "uploaderId": 4
   },
   {
     "id": 25,
@@ -222,7 +246,8 @@
     "likes": 445,
     "image": "https://place-hold.it/300",
     "category": "art",
-    "dateAdded": "2023-12-13T15:50:00Z"
+    "dateAdded": "2023-12-13T15:50:00Z",
+    "uploaderId": 1
   },
   {
     "id": 26,
@@ -231,7 +256,8 @@
     "likes": 987,
     "image": "https://place-hold.it/300",
     "category": "tools",
-    "dateAdded": "2024-02-26T10:15:00Z"
+    "dateAdded": "2024-02-26T10:15:00Z",
+    "uploaderId": 2
   },
   {
     "id": 27,
@@ -240,7 +266,8 @@
     "likes": 1789,
     "image": "https://place-hold.it/300",
     "category": "miniatures",
-    "dateAdded": "2024-04-09T13:40:00Z"
+    "dateAdded": "2024-04-09T13:40:00Z",
+    "uploaderId": 3
   },
   {
     "id": 28,
@@ -249,7 +276,8 @@
     "likes": 234,
     "image": "https://place-hold.it/300",
     "category": "fashion",
-    "dateAdded": "2024-06-22T08:05:00Z"
+    "dateAdded": "2024-06-22T08:05:00Z",
+    "uploaderId": 4
   },
   {
     "id": 29,
@@ -258,7 +286,8 @@
     "likes": 1456,
     "image": "https://place-hold.it/300",
     "category": "3d-printer",
-    "dateAdded": "2024-08-05T12:30:00Z"
+    "dateAdded": "2024-08-05T12:30:00Z",
+    "uploaderId": 1
   },
   {
     "id": 30,
@@ -267,7 +296,8 @@
     "likes": 567,
     "image": "https://place-hold.it/300",
     "category": "hobby-diy",
-    "dateAdded": "2024-10-18T17:55:00Z"
+    "dateAdded": "2024-10-18T17:55:00Z",
+    "uploaderId": 2
   },
   {
     "id": 31,
@@ -276,7 +306,8 @@
     "likes": 1234,
     "image": "https://place-hold.it/300",
     "category": "toys-games",
-    "dateAdded": "2023-01-12T14:00:00Z"
+    "dateAdded": "2023-01-12T14:00:00Z",
+    "uploaderId": 3
   },
   {
     "id": 32,
@@ -285,7 +316,8 @@
     "likes": 678,
     "image": "https://place-hold.it/300",
     "category": "household",
-    "dateAdded": "2023-03-25T11:25:00Z"
+    "dateAdded": "2023-03-25T11:25:00Z",
+    "uploaderId": 4
   },
   {
     "id": 33,
@@ -294,7 +326,8 @@
     "likes": 1567,
     "image": "https://place-hold.it/300",
     "category": "props-cosplay",
-    "dateAdded": "2023-06-08T16:50:00Z"
+    "dateAdded": "2023-06-08T16:50:00Z",
+    "uploaderId": 1
   },
   {
     "id": 34,
@@ -303,7 +336,8 @@
     "likes": 789,
     "image": "https://place-hold.it/300",
     "category": "education",
-    "dateAdded": "2023-08-21T09:15:00Z"
+    "dateAdded": "2023-08-21T09:15:00Z",
+    "uploaderId": 2
   },
   {
     "id": 35,
@@ -312,7 +346,8 @@
     "likes": 890,
     "image": "https://place-hold.it/300",
     "category": "art",
-    "dateAdded": "2023-11-04T15:40:00Z"
+    "dateAdded": "2023-11-04T15:40:00Z",
+    "uploaderId": 3
   },
   {
     "id": 36,
@@ -321,7 +356,8 @@
     "likes": 432,
     "image": "https://place-hold.it/300",
     "category": "tools",
-    "dateAdded": "2024-01-17T10:05:00Z"
+    "dateAdded": "2024-01-17T10:05:00Z",
+    "uploaderId": 4
   },
   {
     "id": 37,
@@ -330,7 +366,8 @@
     "likes": 1678,
     "image": "https://place-hold.it/300",
     "category": "miniatures",
-    "dateAdded": "2024-03-30T13:30:00Z"
+    "dateAdded": "2024-03-30T13:30:00Z",
+    "uploaderId": 1
   },
   {
     "id": 38,
@@ -339,7 +376,8 @@
     "likes": 567,
     "image": "https://place-hold.it/300",
     "category": "fashion",
-    "dateAdded": "2024-06-12T08:55:00Z"
+    "dateAdded": "2024-06-12T08:55:00Z",
+    "uploaderId": 2
   },
   {
     "id": 39,
@@ -348,7 +386,8 @@
     "likes": 1234,
     "image": "https://place-hold.it/300",
     "category": "3d-printer",
-    "dateAdded": "2024-08-25T12:20:00Z"
+    "dateAdded": "2024-08-25T12:20:00Z",
+    "uploaderId": 3
   },
   {
     "id": 40,
@@ -357,7 +396,8 @@
     "likes": 789,
     "image": "https://place-hold.it/300",
     "category": "hobby-diy",
-    "dateAdded": "2024-11-08T17:45:00Z"
+    "dateAdded": "2024-11-08T17:45:00Z",
+    "uploaderId": 4
   },
   {
     "id": 41,
@@ -366,7 +406,8 @@
     "likes": 1567,
     "image": "https://place-hold.it/300",
     "category": "toys-games",
-    "dateAdded": "2023-02-01T14:35:00Z"
+    "dateAdded": "2023-02-01T14:35:00Z",
+    "uploaderId": 1
   },
   {
     "id": 42,
@@ -375,7 +416,8 @@
     "likes": 890,
     "image": "https://place-hold.it/300",
     "category": "household",
-    "dateAdded": "2023-04-14T11:00:00Z"
+    "dateAdded": "2023-04-14T11:00:00Z",
+    "uploaderId": 2
   },
   {
     "id": 43,
@@ -384,7 +426,8 @@
     "likes": 1123,
     "image": "https://place-hold.it/300",
     "category": "props-cosplay",
-    "dateAdded": "2023-07-27T16:25:00Z"
+    "dateAdded": "2023-07-27T16:25:00Z",
+    "uploaderId": 3
   },
   {
     "id": 44,
@@ -393,7 +436,8 @@
     "likes": 678,
     "image": "https://place-hold.it/300",
     "category": "education",
-    "dateAdded": "2023-10-10T09:50:00Z"
+    "dateAdded": "2023-10-10T09:50:00Z",
+    "uploaderId": 4
   },
   {
     "id": 45,
@@ -402,7 +446,8 @@
     "likes": 445,
     "image": "https://place-hold.it/300",
     "category": "art",
-    "dateAdded": "2023-12-23T15:15:00Z"
+    "dateAdded": "2023-12-23T15:15:00Z",
+    "uploaderId": 1
   },
   {
     "id": 46,
@@ -411,7 +456,8 @@
     "likes": 987,
     "image": "https://place-hold.it/300",
     "category": "tools",
-    "dateAdded": "2024-03-07T10:40:00Z"
+    "dateAdded": "2024-03-07T10:40:00Z",
+    "uploaderId": 2
   },
   {
     "id": 47,
@@ -420,7 +466,8 @@
     "likes": 1789,
     "image": "https://place-hold.it/300",
     "category": "miniatures",
-    "dateAdded": "2024-05-20T14:05:00Z"
+    "dateAdded": "2024-05-20T14:05:00Z",
+    "uploaderId": 3
   },
   {
     "id": 48,
@@ -429,7 +476,8 @@
     "likes": 234,
     "image": "https://place-hold.it/300",
     "category": "fashion",
-    "dateAdded": "2024-07-03T08:30:00Z"
+    "dateAdded": "2024-07-03T08:30:00Z",
+    "uploaderId": 4
   },
   {
     "id": 49,
@@ -438,7 +486,8 @@
     "likes": 1456,
     "image": "https://place-hold.it/300",
     "category": "3d-printer",
-    "dateAdded": "2024-09-16T12:55:00Z"
+    "dateAdded": "2024-09-16T12:55:00Z",
+    "uploaderId": 1
   },
   {
     "id": 50,
@@ -447,7 +496,8 @@
     "likes": 567,
     "image": "https://place-hold.it/300",
     "category": "hobby-diy",
-    "dateAdded": "2024-11-29T17:20:00Z"
+    "dateAdded": "2024-11-29T17:20:00Z",
+    "uploaderId": 2
   },
   {
     "id": 51,
@@ -456,7 +506,8 @@
     "likes": 1234,
     "image": "https://place-hold.it/300",
     "category": "toys-games",
-    "dateAdded": "2023-01-15T14:45:00Z"
+    "dateAdded": "2023-01-15T14:45:00Z",
+    "uploaderId": 3
   },
   {
     "id": 52,
@@ -465,7 +516,8 @@
     "likes": 678,
     "image": "https://place-hold.it/300",
     "category": "household",
-    "dateAdded": "2023-03-28T11:10:00Z"
+    "dateAdded": "2023-03-28T11:10:00Z",
+    "uploaderId": 4
   },
   {
     "id": 53,
@@ -474,7 +526,8 @@
     "category": "tools",
     "likes": 0,
     "image": "/models/1751992469625_image.png",
-    "dateAdded": "2025-07-08T16:34:29.657Z"
+    "dateAdded": "2025-07-08T16:34:29.657Z",
+    "uploaderId": 1
   },
   {
     "id": 54,
@@ -483,6 +536,37 @@
     "category": "props-cosplay",
     "likes": 0,
     "image": "/models/1751992683773_image.png",
-    "dateAdded": "2025-07-08T16:38:03.780Z"
+    "dateAdded": "2025-07-08T16:38:03.780Z",
+    "uploaderId": 2
+  },
+  {
+    "id": 55,
+    "name": "alice's model",
+    "description": "my latest model",
+    "category": "miniatures",
+    "likes": 0,
+    "image": "/models/1752087241053_dice.PNG",
+    "dateAdded": "2025-07-09T18:54:01.056Z",
+    "uploaderId": 3
+  },
+  {
+    "id": 56,
+    "name": "another one of alice's models",
+    "description": "my second model",
+    "category": "tools",
+    "likes": 0,
+    "image": "/models/1752087620880_image.png",
+    "dateAdded": "2025-07-09T19:00:20.889Z",
+    "uploaderId": 3
+  },
+  {
+    "id": 57,
+    "name": "third of alice's models",
+    "description": "third model",
+    "category": "props-cosplay",
+    "likes": 0,
+    "image": "/models/1752087993625_a_travel_cat.png",
+    "dateAdded": "2025-07-09T19:06:33.628Z",
+    "uploaderId": 3
   }
 ]

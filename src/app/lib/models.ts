@@ -1,25 +1,48 @@
+
 import modelsData from "../data/models.json"
+import usersData from "../data/users.json"
 import type { Model } from "../types/Model"
 import type { GetModelsParams } from "../types/GetModelsParams"
 
-
-export async function getModels({ category, page = 1, limit = 9 }: GetModelsParams = {}): Promise<{ models: Model[], totalPages: number }> {
+export async function getModels({ category, uploaderId, filterQuery, page = 1, limit = 9 }: GetModelsParams = {}): Promise<{ models: Model[], totalPages: number }> {
   try {
     let filteredModels = [...modelsData];
+
     if (category) {
       filteredModels = modelsData.filter((model: Model) =>
         model.category === category);
     }
-    const totalPages = Math.ceil(filteredModels.length / limit);
+
+    if (uploaderId) {
+      filteredModels = filteredModels.filter((model: Model) =>
+        model.uploaderId.toString() === uploaderId.toString());
+    }
+
+    if (filterQuery) {
+      const lowerCaseQuery = filterQuery.toLowerCase();
+      filteredModels = filteredModels.filter((model: Model) =>
+        model.name.toLowerCase().includes(lowerCaseQuery) ||
+        model.description.toLowerCase().includes(lowerCaseQuery)
+      );
+    }
+
+    const modelsWithUploader = filteredModels.map(model => {
+      const uploader = usersData.find(user => user.id === model.uploaderId);
+      return { ...model, uploaderName: uploader ? uploader.name : 'Unknown' };
+    });
+
+    const totalPages = Math.ceil(modelsWithUploader.length / limit);
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
-    const models = filteredModels.slice(startIndex, endIndex);
+    const models = modelsWithUploader.slice(startIndex, endIndex);
+
     return { models, totalPages };
   } catch (error) {
     console.error("Failed to get models:", error);
     throw new Error("Failed to get models");
   }
 }
+
 
 export async function getModelById(id: string | number): Promise<Model> {
   try {
@@ -35,51 +58,3 @@ export async function getModelById(id: string | number): Promise<Model> {
     throw error;
   }
 }
-
-// export async function getFavoriteModels(): Promise<Model[]> {
-//   try {
-//     const favoriteModels = modelsData.filter((model) => model.isLiked);
-//     return favoriteModels;
-//   } catch (error) {
-//     console.error("Failed to get favorite models:", error);
-//     throw error;
-//   }
-// }
-
-// export async function setLikedModel(model: Model): Promise<Model> {
-//   try {
-//     const modelToFavor = await getModelById(model.id);
-//     modelToFavor.isLiked = true;
-
-//     const filePath = path.join(process.cwd(), "src/app/data/models.json");
-//     fs.writeFileSync(filePath, JSON.stringify(modelsData, null, 4), "utf-8");
-//     return modelToFavor;
-//   } catch(error){
-//     console.error("Failed to set model as liked:", error);
-//     throw error;
-//   }
-// }
-
-// export async function removeLikedModel(model: Model): Promise<Model> {
-//   try {
-//     const modelToUnfavor = await getModelById(model.id);
-//     modelToUnfavor.isLiked = false;
-
-//     const filePath = path.join(process.cwd(), "src/app/data/models.json");
-//     fs.writeFileSync(filePath, JSON.stringify(modelsData, null, 4), "utf-8");
-//     return modelToUnfavor;
-//   } catch(error) {
-//     console.error("Failed to remove model from liked:", error);
-//     throw error;
-//   }
-// }
-
-// export async function isLiked(model:Model): Promise<boolean> {
-//   try {
-//     const modelToCheck = await getModelById(model.id);
-//     return modelToCheck.isLiked;
-//   } catch (error) {
-//     console.error("Failed to check if model is favorite:", error);
-//     throw error;
-//   }
-//}
