@@ -1,5 +1,5 @@
-import users from '../data/users.json';
-import { User } from '../types/User';
+import users from '@/app/data/users.json';
+import { User } from "@/app/types/users/User";
 
 export async function getUsers(): Promise<User[]> {
     try {
@@ -29,6 +29,21 @@ export async function getUserById(id: number): Promise<User> {
         return user;
     } catch (error) {
         console.error(`Failed to get user by id (${id}):`, error);
+        throw error;
+    }
+}
+
+export async function getUsersByIds(ids: number[]): Promise<User[]> {
+    try {
+        // Simulate a delay to mimic an API call
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
+        // Filter users whose IDs are in the provided list
+        const filteredUsers = users.filter((user: User) => ids.includes(user.id));
+        
+        return filteredUsers;
+    } catch (error) {
+        console.error(`Failed to get users by IDs (${ids}):`, error);
         throw error;
     }
 }

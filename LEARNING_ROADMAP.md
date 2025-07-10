@@ -68,10 +68,10 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [X] Learn: Dynamic routing, user state management
 
 ### 12. Comments System
-- [ ] Add commenting on individual models
-- [ ] Comment threading and replies
-- [ ] Delete/edit comment functionality
-- [ ] Learn: Complex state updates, optimistic updates
+- [X] Add commenting on individual models
+- [X] Comment threading and replies
+- [X] Delete/edit comment functionality
+- [X] Learn: Complex state updates, optimistic updates
 
 ## Advanced/Production-Ready (Best Practices)
 

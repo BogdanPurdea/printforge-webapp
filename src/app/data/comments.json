@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1752174456781",
+    "createdAt": "2025-07-10T19:07:36.781Z",
+    "modelId": "1",
+    "userId": "3",
+    "content": "This is a fantastic design! Can't wait to print it.",
+    "parentId": null
+  },
+  {
+    "id": "1752181568055",
+    "createdAt": "2025-07-10T21:06:08.055Z",
+    "modelId": "9",
+    "userId": 1,
+    "content": "nice model\n",
+    "parentId": null
+  },
+  {
+    "id": "1752181631171",
+    "createdAt": "2025-07-10T21:07:11.171Z",
+    "modelId": "9",
+    "userId": 1,
+    "content": "thanks",
+    "parentId": "1752181568055"
+  },
+  {
+    "id": "1752182239820",
+    "createdAt": "2025-07-10T21:17:19.820Z",
+    "modelId": "7",
+    "userId": 1,
+    "content": "fantastic model",
+    "parentId": null
+  },
+  {
+    "id": "1752186755810",
+    "createdAt": "2025-07-10T22:32:35.810Z",
+    "modelId": "19",
+    "userId": 1,
+    "content": "cool cooling system",
+    "parentId": null
+  }
+]
