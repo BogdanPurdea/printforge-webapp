@@ -1,12 +1,12 @@
 
 import { getUserById } from "@/app/lib/users";
 import { getModels } from "@/app/lib/models";
-import ModelsGrid from "@/app/components/ModelsGrid";
-import { UserProfilePageParams } from "@/app/types/UserProfilePageParams";
+import ModelsGrid from "@/app/components/models/ModelsGrid";
+import { UserProfilePageParams } from "@/app/types/users/UserProfilePageParams";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/app/components/ui/button";
-import PaginationControls from "@/app/components/PaginationControls";
+import PaginationControls from "@/app/components/models/PaginationControls";
 import Image from "next/image";
 
 export default async function UserProfilePage({ params, searchParams }: UserProfilePageParams) {

@@ -1,4 +1,4 @@
-import { Category } from "@/app/types/Category";
+import { Category } from "@/app/types/categories/Category";
 
 export type ModelUploadFormProps = {
     categories: Category[];

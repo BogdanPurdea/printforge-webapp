@@ -1,8 +1,8 @@
-import { getModels } from '../lib/models';
-import ModelsGrid from '../components/ModelsGrid';
-import { ModelsPageProps } from '../types/ModelsPageProps';
-import ModelsGridErrorBoundary from '../components/ModelsGridErrorBoundary';
-import PaginationControls from '../components/PaginationControls';
+import { getModels } from '@/app/lib/models';
+import ModelsGrid from '@/app/components/models/ModelsGrid';
+import { ModelsPageProps } from '@/app/types/models/ModelsPageProps';
+import ModelsGridErrorBoundary from '@/app/components/models/ModelsGridErrorBoundary';
+import PaginationControls from '@/app/components/models/PaginationControls';
 
 export default async function ModelsPage({ searchParams }: ModelsPageProps) {
   const pageStr = (await searchParams).page ?? '1';
@@ -10,8 +10,8 @@ export default async function ModelsPage({ searchParams }: ModelsPageProps) {
   if (isNaN(pageNum) || pageNum < 1) {
     pageNum = 1;
   }
-  const query = (await searchParams).query ?? '';
-  const { models, totalPages } = await getModels({ page: pageNum, query });
+  const filterQuery = (await searchParams).filter ?? '';
+  const { models, totalPages } = await getModels({ page: pageNum, filterQuery });
 
   return (
     <section>

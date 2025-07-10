@@ -1,4 +1,4 @@
-import { Model } from "@/app/types/Model";
+import { Model } from "@/app/types/models/Model";
 
 export type ModelsGridProps = {
     title: string,

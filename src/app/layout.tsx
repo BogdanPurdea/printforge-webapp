@@ -1,7 +1,7 @@
-import "./globals.css";
-import NavHeader from "./components/NavHeader";
+import "@/app/globals.css";
+import NavHeader from "@/app/components/layout/NavHeader";
 import { Albert_Sans, Montserrat_Alternates } from "next/font/google";
-import { ThemeProvider } from "./components/ThemeProvider";
+import { ThemeProvider } from "@/app/components/shared/ThemeProvider";
 
 const albertSans = Albert_Sans({
     subsets: ['latin'],

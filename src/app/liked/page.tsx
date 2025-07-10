@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 import { useLikes } from '@/app/hooks/useLikes';
 import { getModels } from '@/app/lib/models';
-import { Model } from '@/app/types/Model';
-import ModelsGrid from '@/app/components/ModelsGrid';
-import ModelsGridErrorBoundary from '@/app/components/ModelsGridErrorBoundary';
-import ModelsGridSkeleton from '../components/ModelsGridSkeleton';
+import { Model } from '@/app/types/models/Model';
+import ModelsGrid from "@/app/components/models/ModelsGrid";
+import ModelsGridErrorBoundary from '@/app/components/models/ModelsGridErrorBoundary';
+import ModelsGridSkeleton from '@/app/components/models/ModelsGridSkeleton';
 
 export default function LikedModelsPage() {
     const { likes } = useLikes();

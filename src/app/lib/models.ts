@@ -1,8 +1,8 @@
 
-import modelsData from "../data/models.json"
-import usersData from "../data/users.json"
-import type { Model } from "../types/Model"
-import type { GetModelsParams } from "../types/GetModelsParams"
+import modelsData from "@/app/data/models.json"
+import usersData from "@/app/data/users.json"
+import type { Model } from "@/app/types/models/Model"
+import type { GetModelsParams } from "@/app/types/models/GetModelsParams"
 
 export async function getModels({ category, uploaderId, filterQuery, page = 1, limit = 9 }: GetModelsParams = {}): Promise<{ models: Model[], totalPages: number }> {
   try {

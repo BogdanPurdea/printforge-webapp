@@ -1,5 +1,5 @@
-import categories from "../data/categories.json"
-import { Category } from "../types/Category"
+import categories from "@/app/data/categories.json"
+import { Category } from "@/app/types/categories/Category";
 
 export async function getAllCategories(): Promise<Category[]> {
     try {

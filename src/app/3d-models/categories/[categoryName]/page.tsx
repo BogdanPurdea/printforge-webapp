@@ -1,8 +1,8 @@
-import { CategoryPageProps } from "@/app/types/CategoryPageProps";
+import { CategoryPageProps } from "@/app/types/categories/CategoryPageProps";
 import { getCategoryBySlug } from "@/app/lib/categories";
 import { getModels } from "@/app/lib/models";
-import ModelsGrid from "@/app/components/ModelsGrid";
-import PaginationControls from "@/app/components/PaginationControls";
+import ModelsGrid from "@/app/components/models/ModelsGrid";
+import PaginationControls from "@/app/components/models/PaginationControls";
 import { notFound } from "next/navigation";
 
 export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {

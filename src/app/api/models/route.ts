@@ -1,8 +1,8 @@
 
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
-import { Model } from '@/app/types/Model';
+import { Model } from '@/app/types/models/Model';
 
 // Define the path to the models.json file
 const modelsFilePath = path.join(process.cwd(), 'src', 'app', 'data', 'models.json');
@@ -22,7 +22,7 @@ async function ensureDirectoryExists(dirPath: string) {
     }
 }
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     try {
         // Ensure the public/models directory exists
         await ensureDirectoryExists(publicFolderPath);
