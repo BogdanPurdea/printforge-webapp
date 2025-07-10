@@ -1,4 +1,4 @@
-import NavCategories from "@/app/components/NavCategories";
+import NavCategories from "@/app/components/layout/NavCategories";
 
 export default function ModelsLayout({
     children,
