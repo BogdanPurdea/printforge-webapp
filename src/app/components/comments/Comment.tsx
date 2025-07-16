@@ -5,17 +5,16 @@ import CommentForm from "@/app/components/comments/CommentForm";
 import { Button } from "@/app/components/ui/button";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
 import { CommentProps } from '@/app/types/comments/CommentProps';
-
 import { FaEdit, FaReply, FaTrash } from "react-icons/fa";
+import { deleteComment } from "@/app/lib/client/comments";
 
 export default function Comment({ comment, user, modelId }: CommentProps) {
     const router = useRouter();
     const [isReplying, setIsReplying] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
 
-    const currentMockUserId = 1;
+    const currentMockUserId = "user1";
     const isAuthor = user?.id === currentMockUserId;
 
     const handleDelete = async () => {
@@ -24,14 +23,7 @@ export default function Comment({ comment, user, modelId }: CommentProps) {
         }
 
         try {
-            const res = await fetch(`/api/comments/${comment.id}`, {
-                method: "DELETE",
-            });
-
-            if (!res.ok) {
-                throw new Error("Failed to delete comment");
-            }
-
+            await deleteComment(comment.id);
             router.refresh();
         } catch (error) {
             console.error(error);
@@ -52,7 +44,7 @@ export default function Comment({ comment, user, modelId }: CommentProps) {
     return (
         <div className="flex items-start space-x-4">
             <Image
-                src={user?.avatar || "/default-avatar.png"}
+                src={user?.avatarUrl || "/default-avatar.png"}
                 alt={user?.name || "Anonymous user"}
                 width={40}
                 height={40}

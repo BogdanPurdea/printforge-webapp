@@ -1,7 +1,7 @@
 const LIKES_KEY = "likedModels";
 
 // Helper function to get likes from localStorage
-export const getLikesFromStorage = (): number[] => {
+export const getLikesFromStorage = (): string[] => {
     if (typeof window === "undefined") {
         return [];
     }
@@ -17,7 +17,7 @@ export const getLikesFromStorage = (): number[] => {
 };
 
 // Helper function to save likes to localStorage
-export const saveLikesToStorage = (likes: number[]) => {
+export const saveLikesToStorage = (likes: string[]) => {
     console.log('lib/likes: saveLikesToStorage - Saving', likes);
     try {
         window.localStorage.setItem(LIKES_KEY, JSON.stringify(likes));

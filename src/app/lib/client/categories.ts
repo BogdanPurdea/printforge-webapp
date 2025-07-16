@@ -1,8 +1,12 @@
-import categories from "@/app/data/categories.json"
 import { Category } from "@/app/types/categories/Category";
 
 export async function getAllCategories(): Promise<Category[]> {
     try {
+        const response = await fetch('/api/categories');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const categories = await response.json();
         return categories;
     } catch (error) {
         console.error("Failed to get all categories:", error);
@@ -12,10 +16,11 @@ export async function getAllCategories(): Promise<Category[]> {
 
 export async function getCategoryBySlug(slug: string): Promise<Category> {
     try {
-        const category = categories.find(c => c.slug === slug);
-        if (!category) {
-            throw new Error(`Category with slug ${slug} not found`)
+        const response = await fetch(`/api/categories?slug=${slug}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+        const category = await response.json();
         return category;
     } catch (error) {
         console.error(`Failed to get category by slug (${slug}):`, error);

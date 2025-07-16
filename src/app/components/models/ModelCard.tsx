@@ -9,7 +9,7 @@ export default function ModelCard({ model }: ModelCardProps) {
     return (
         <div className="bg-card rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 overflow-hidden h-full flex flex-col">
             <Link href={`/3d-models/${model.id}`} className="block" aria-labelledby={`model-${model.id}-title`}>
-                <Image src={model.image} alt={model.name} width={300} height={200} className="w-full h-48 object-cover" />
+                <Image src={model.image || '/placeholder.png'} alt={model.name} width={300} height={200} className="w-full h-48 object-cover" />
             </Link>
             <div className="p-4 flex flex-col flex-grow">
                 <Link href={`/3d-models/${model.id}`} className="block" aria-labelledby={`model-${model.id}-title`}>

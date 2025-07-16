@@ -1,6 +1,6 @@
 export type GetModelsParams = {
     category?: string
-    uploaderId?: number
+    uploaderId?: string
     page?: number
     limit?: number
     filterQuery?: string

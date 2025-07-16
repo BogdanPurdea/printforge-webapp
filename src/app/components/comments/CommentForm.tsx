@@ -5,6 +5,7 @@ import { CommentFormProps } from '@/app/types/comments/CommentFormProps';
 import { Button } from "@/app/components/ui/button";
 import { Textarea } from "@/app/components/ui/textarea";
 import { useRouter } from "next/navigation";
+import { createComment, updateComment } from "@/app/lib/client/comments";
 
 export default function CommentForm({ modelId, parentId = null, existingComment, onSuccess }: CommentFormProps) {
     const router = useRouter();
@@ -12,6 +13,7 @@ export default function CommentForm({ modelId, parentId = null, existingComment,
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const isEditing = !!existingComment;
+
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -24,22 +26,10 @@ export default function CommentForm({ modelId, parentId = null, existingComment,
         setIsSubmitting(true);
 
         try {
-            const url = isEditing ? `/api/comments/${existingComment.id}` : "/api/comments";
-            const method = isEditing ? "PUT" : "POST";
-
-            const body = isEditing
-                ? JSON.stringify({ content })
-                : JSON.stringify({ content, modelId, parentId, userId: 1 }); // Hardcoded userId for now
-
-            const res = await fetch(url, {
-                method,
-                headers: { "Content-Type": "application/json" },
-                body,
-            });
-
-            if (!res.ok) {
-                const errorData = await res.json();
-                throw new Error(errorData.message || "Something went wrong");
+            if (isEditing) {
+                await updateComment(existingComment.id, content);
+            } else {
+                await createComment({ content, modelId, parentId, userId: 'user1' }); // Hardcoded userId for now
             }
 
             setContent("");

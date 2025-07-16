@@ -1,3 +1,3 @@
 export type LikeButtonProps = {
-    modelId: number;
+    modelId: string;
 };

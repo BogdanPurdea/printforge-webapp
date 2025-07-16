@@ -44,7 +44,7 @@ function nestComments(comments: CommentType[], usersById: Map<string, User>): (C
 export default async function CommentList({ modelId }: CommentListProps) {
     const comments = await getComments(modelId);
     const userIds = [...new Set(comments.map(comment => comment.userId))];
-    const users = await getUsersByIds(userIds.map(id => parseInt(id)));
+    const users = await getUsersByIds(userIds);
     const usersById = new Map(users.map(user => [String(user.id), user]));
 
     const nestedComments = nestComments(comments, usersById);

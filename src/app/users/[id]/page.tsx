@@ -1,6 +1,6 @@
 
-import { getUserById } from "@/app/lib/users";
-import { getModels } from "@/app/lib/models";
+import { getUserById } from "@/app/lib/server/users";
+import { getModels } from "@/app/lib/server/models";
 import ModelsGrid from "@/app/components/models/ModelsGrid";
 import { UserProfilePageParams } from "@/app/types/users/UserProfilePageParams";
 import { notFound } from "next/navigation";
@@ -12,15 +12,12 @@ import Image from "next/image";
 export default async function UserProfilePage({ params, searchParams }: UserProfilePageParams) {
     const { id } = await params;
     const { page, sort, filter } = await searchParams;
-    const idNum = parseInt(id);
-    if (isNaN(idNum)) {
-        notFound();
-    }
+
     const pageNum = page ? parseInt(page) : 1;
 
     const [user, { models, totalPages }] = await Promise.all([
-        getUserById(idNum),
-        getModels({ uploaderId: idNum, page: pageNum, filterQuery: filter })
+        getUserById(id),
+        getModels({ uploaderId: id, page: pageNum, filterQuery: filter })
     ]);
 
     const queryString = new URLSearchParams({
@@ -36,7 +33,7 @@ export default async function UserProfilePage({ params, searchParams }: UserProf
         <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
                 <Image
-                    src={user.avatar}
+                    src={user.avatarUrl || "/default-avatar.png"}
                     alt={`${user.name}'s avatar`}
                     width={128}
                     height={128}
@@ -44,7 +41,7 @@ export default async function UserProfilePage({ params, searchParams }: UserProf
                 />
                 <div className="flex-1">
                     <h1 className="text-4xl font-bold mb-2">{user.name}</h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">{user.bio}</p>
+                    <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">{user.about}</p>
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
-import { getModels } from '@/app/lib/models';
+import { getModels } from '@/app/lib/server/models';
 import ModelsGrid from '@/app/components/models/ModelsGrid';
 import { ModelsPageProps } from '@/app/types/models/ModelsPageProps';
 import ModelsGridErrorBoundary from '@/app/components/models/ModelsGridErrorBoundary';
