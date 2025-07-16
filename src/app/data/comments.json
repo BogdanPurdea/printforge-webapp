@@ -1,42 +1,38 @@
 [
   {
-    "id": "1752174456781",
-    "createdAt": "2025-07-10T19:07:36.781Z",
-    "modelId": "1",
-    "userId": "3",
-    "content": "This is a fantastic design! Can't wait to print it.",
-    "parentId": null
+    "id": "comment1",
+    "content": "This dragon model is amazing!",
+    "userId": "user1",
+    "modelId": "model1",
+    "createdAt": "2024-07-10T10:00:00Z"
   },
   {
-    "id": "1752181568055",
-    "createdAt": "2025-07-10T21:06:08.055Z",
-    "modelId": "9",
-    "userId": 1,
-    "content": "nice model\n",
-    "parentId": null
+    "id": "comment2",
+    "content": "I agree, the articulation is incredible.",
+    "userId": "user2",
+    "modelId": "model1",
+    "parentId": "comment1",
+    "createdAt": "2024-07-10T10:15:00Z"
   },
   {
-    "id": "1752181631171",
-    "createdAt": "2025-07-10T21:07:11.171Z",
-    "modelId": "9",
-    "userId": 1,
-    "content": "thanks",
-    "parentId": "1752181568055"
+    "id": "comment3",
+    "content": "Great planter, perfect for my desk.",
+    "userId": "user3",
+    "modelId": "model2",
+    "createdAt": "2024-07-11T11:00:00Z"
   },
   {
-    "id": "1752182239820",
-    "createdAt": "2025-07-10T21:17:19.820Z",
-    "modelId": "7",
-    "userId": 1,
-    "content": "fantastic model",
-    "parentId": null
+    "id": "comment4",
+    "content": "Any tips on printing this helmet?",
+    "userId": "user1",
+    "modelId": "model3",
+    "createdAt": "2024-07-12T12:30:00Z"
   },
   {
-    "id": "1752186755810",
-    "createdAt": "2025-07-10T22:32:35.810Z",
-    "modelId": "19",
-    "userId": 1,
-    "content": "cool cooling system",
-    "parentId": null
+    "id": "comment5",
+    "content": "The solar system model is very educational.",
+    "userId": "user2",
+    "modelId": "model4",
+    "createdAt": "2024-07-13T13:45:00Z"
   }
 ]

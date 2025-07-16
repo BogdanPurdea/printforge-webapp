@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  name      String
+  avatarUrl String?
+  about     String?
+  comments  Comment[]
+  models    Model[]
+  likes     Like[]
+}
+
+model Model {
+  id          String    @id @default(cuid())
+  name        String
+  description String
+  imageUrl    String
+  likes       Int       @default(0)
+  userId      String
+  author      User      @relation(fields: [userId], references: [id])
+  categoryId  String
+  category    Category  @relation(fields: [categoryId], references: [id])
+  comments    Comment[]
+  likedBy     Like[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id     String  @id @default(cuid())
+  name   String  @unique
+  slug   String  @unique
+  models Model[]
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  content   String
+  userId    String
+  author    User     @relation(fields: [userId], references: [id])
+  modelId   String
+  model     Model    @relation(fields: [modelId], references: [id])
+  parentId  String?
+  parent    Comment? @relation("replies", fields: [parentId], references: [id])
+  replies   Comment[] @relation("replies")
+
+  createdAt DateTime @default(now())
+}
+
+model Like {
+  id      String @id @default(cuid())
+  userId  String
+  user    User   @relation(fields: [userId], references: [id])
+  modelId String
+  model   Model  @relation(fields: [modelId], references: [id])
+
+  @@unique([userId, modelId])
+}

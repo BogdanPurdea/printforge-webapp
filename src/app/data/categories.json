@@ -1,12 +1,52 @@
 [
-    { "displayName": "3D Printer", "slug": "3d-printer" },
-    { "displayName": "Art", "slug": "art" },
-    { "displayName": "Education", "slug": "education" },
-    { "displayName": "Fashion", "slug": "fashion" },
-    { "displayName": "Hobby & DIY", "slug": "hobby-diy" },
-    { "displayName": "Household", "slug": "household" },
-    { "displayName": "Miniatures", "slug": "miniatures" },
-    { "displayName": "Props & Cosplay", "slug": "props-cosplay" },
-    { "displayName": "Tools", "slug": "tools" },
-    { "displayName": "Toys & Games", "slug": "toys-games" }
+  {
+    "id": "category1",
+    "name": "3D Printer",
+    "slug": "3d-printer"
+  },
+  {
+    "id": "category2",
+    "name": "Art",
+    "slug": "art"
+  },
+  {
+    "id": "category3",
+    "name": "Education",
+    "slug": "education"
+  },
+  {
+    "id": "category4",
+    "name": "Fashion",
+    "slug": "fashion"
+  },
+  {
+    "id": "category5",
+    "name": "Hobby & DIY",
+    "slug": "hobby-diy"
+  },
+  {
+    "id": "category6",
+    "name": "Household",
+    "slug": "household"
+  },
+  {
+    "id": "category7",
+    "name": "Miniatures",
+    "slug": "miniatures"
+  },
+  {
+    "id": "category8",
+    "name": "Props & Cosplay",
+    "slug": "props-cosplay"
+  },
+  {
+    "id": "category9",
+    "name": "Tools",
+    "slug": "tools"
+  },
+  {
+    "id": "category10",
+    "name": "Toys & Games",
+    "slug": "toys-games"
+  }
 ]

@@ -76,9 +76,10 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 ## Advanced/Production-Ready (Best Practices)
 
 ### 13. Database Integration
-- [ ] Replace JSON with Prisma + SQLite/PostgreSQL
-- [ ] Create database schema and migrations
-- [ ] Learn: ORMs, database design, SQL basics
+- [X] Replace JSON with Prisma + SQLite
+- [X] Create database schema and migrations
+- [ ] Migrate the database to PostgreSQL later on
+- [X] Learn: ORMs, database design, SQL basics
 
 ### 14. Authentication
 - [ ] Implement NextAuth.js for user login
