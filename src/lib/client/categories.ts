@@ -1,4 +1,4 @@
-import { Category } from "@/app/types/categories/Category";
+import { Category } from "@/types/categories/Category";
 
 export async function getAllCategories(): Promise<Category[]> {
     try {

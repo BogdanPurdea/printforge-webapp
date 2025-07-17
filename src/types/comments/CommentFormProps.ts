@@ -1,4 +1,4 @@
-import { Comment } from '@/app/types/comments/Comment';
+import { Comment } from '@/types/comments/Comment';
 
 export type CommentFormProps = {
   modelId: string;

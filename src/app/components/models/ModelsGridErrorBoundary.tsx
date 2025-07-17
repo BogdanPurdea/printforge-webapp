@@ -1,7 +1,7 @@
 'use client';
 
 import { useErrorBoundary } from 'use-error-boundary';
-import { ModelsGridErrorBoundaryProps } from '@/app/types/models/ModelsGridErrorBoundaryProps';
+import { ModelsGridErrorBoundaryProps } from '@/types/models/ModelsGridErrorBoundaryProps';
 
 export default function ModelsGridErrorBoundary({ children, fallback }: ModelsGridErrorBoundaryProps) {
     const { ErrorBoundary, didCatch, error, reset } = useErrorBoundary();

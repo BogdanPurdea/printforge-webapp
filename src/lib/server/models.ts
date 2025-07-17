@@ -1,7 +1,7 @@
-import { prisma } from "@/app/lib/server/prisma"
-import type { Model } from "@/app/types/models/Model"
-import type { GetModelsParams } from "@/app/types/models/GetModelsParams"
-import { transformPrismaModelToAppModel } from "@/app/lib/server/model-transformers";
+import { prisma } from "@/lib/server/prisma"
+import type { Model } from "@/types/models/Model"
+import type { GetModelsParams } from "@/types/models/GetModelsParams"
+import { transformPrismaModelToAppModel } from "@/lib/server/model-transformers";
 
 export async function getModels({ category, uploaderId, filterQuery, page = 1, limit = 9 }: GetModelsParams = {}): Promise<{ models: Model[], totalPages: number }> {
   try {

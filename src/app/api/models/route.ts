@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
-import { prisma } from "@/app/lib/server/prisma";
+import { prisma } from "@/lib/server/prisma";
 
 // Define the path to the public directory for storing images
 const publicFolderPath = path.join(process.cwd(), 'public', 'models');

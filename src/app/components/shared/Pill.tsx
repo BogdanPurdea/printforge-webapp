@@ -1,4 +1,4 @@
-import { PillProps } from "@/app/types/ui/PillProps";
+import { PillProps } from "@/types/ui/PillProps";
 
 export default function Pill({ children, className = "" }: PillProps) {
     return (

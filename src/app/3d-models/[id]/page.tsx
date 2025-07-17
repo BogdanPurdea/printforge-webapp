@@ -1,5 +1,5 @@
-import { ModelDetailPageProps } from "@/app/types/models/ModelDetailPageProps"
-import { getModelById } from "@/app/lib/server/models"
+import { ModelDetailPageProps } from "@/types/models/ModelDetailPageProps"
+import { getModelById } from "@/lib/server/models"
 import Pill from "@/app/components/shared/Pill"
 import LikeButton from "@/app/components/shared/LikeButton";
 import { notFound } from "next/navigation"

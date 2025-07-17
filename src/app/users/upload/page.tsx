@@ -1,10 +1,10 @@
 'use client';
 
 import ModelUploadForm from "@/app/components/models/ModelUploadForm";
-import { getAllCategories } from "@/app/lib/categories";
+import { getAllCategories } from "@/lib/client/categories";
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Category } from '@/app/types/categories/Category';
+import { Category } from '@/types/categories/Category';
 
 export default function UploadPage() {
     const searchParams = useSearchParams();

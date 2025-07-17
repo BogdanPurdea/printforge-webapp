@@ -1,7 +1,7 @@
 "use client"
 
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
-import { LikeButtonProps } from "@/app/types/ui/LikeButtonProps";
+import { LikeButtonProps } from "@/types/ui/LikeButtonProps";
 import { useLikes } from "@/app/hooks/useLikes";
 
 export default function LikeButton({ modelId }: LikeButtonProps) {

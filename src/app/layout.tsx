@@ -1,7 +1,9 @@
 import "@/app/globals.css";
+import AuthProvider from "@/app/components/AuthProvider";
 import NavHeader from "@/app/components/layout/NavHeader";
 import { Albert_Sans, Montserrat_Alternates } from "next/font/google";
 import { ThemeProvider } from "@/app/components/shared/ThemeProvider";
+import { ChildrenProps } from "@/types/shared/ChildrenProps";
 
 const albertSans = Albert_Sans({
     subsets: ['latin'],
@@ -15,11 +17,7 @@ const montserratAlternates = Montserrat_Alternates({
   display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en" className={`${albertSans.className} ${montserratAlternates.variable}`}>
       <body>
@@ -29,8 +27,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavHeader />
-          {children}
+          <AuthProvider>
+            <NavHeader />
+            {children}
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

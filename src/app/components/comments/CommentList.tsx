@@ -1,11 +1,11 @@
 import React from "react";
-import { Comment as CommentType } from "@/app/types/comments/Comment";
-import { User } from "@/app/types/users/User";
-import { getUsersByIds } from "@/app/lib/users";
+import { Comment as CommentType } from "@/types/comments/Comment";
+import { User } from "@/types/users/User";
+import { getUsersByIds } from "@/lib/server/users";
 import Comment from "@/app/components/comments/Comment";
 import CommentForm from "@/app/components/comments/CommentForm";
-import { CommentWithChildren } from "@/app/types/comments/CommentWithChildren";
-import { CommentListProps } from "@/app/types/comments/CommentListProps";
+import { CommentWithChildren } from "@/types/comments/CommentWithChildren";
+import { CommentListProps } from "@/types/comments/CommentListProps";
 
 async function getComments(modelId: string): Promise<CommentType[]> {
     const res = await fetch(`http://localhost:3000/api/comments?modelId=${modelId}`, {

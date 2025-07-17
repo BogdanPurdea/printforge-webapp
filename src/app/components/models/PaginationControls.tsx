@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PaginationControlsProps } from '@/app/types/navigation/PaginationControlsProps';
+import { PaginationControlsProps } from '@/types/navigation/PaginationControlsProps';
 
 export default function PaginationControls({ currentPage, totalPages, baseUrl = '/3d-models' }: PaginationControlsProps) {
   const prevPage = currentPage - 1;

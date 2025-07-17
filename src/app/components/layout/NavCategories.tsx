@@ -1,7 +1,7 @@
 'use client'
 
-import { getAllCategories } from "@/app/lib/client/categories";
-import { Category } from "@/app/types/categories/Category";
+import { getAllCategories } from "@/lib/client/categories";
+import { Category } from "@/types/categories/Category";
 import NavLink from "@/app/components/layout/NavLink";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";

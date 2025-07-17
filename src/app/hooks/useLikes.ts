@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react';
-import { getLikesFromStorage, saveLikesToStorage } from '@/app/lib/client/likes';
+import { getLikesFromStorage, saveLikesToStorage } from '@/lib/client/likes';
 
 export function useLikes() {
     const [likes, setLikes] = useState<string[]>([]);

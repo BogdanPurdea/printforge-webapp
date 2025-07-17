@@ -1,6 +1,6 @@
-import { CategoryPageProps } from "@/app/types/categories/CategoryPageProps";
-import { getCategoryBySlug } from "@/app/lib/categories";
-import { getModels } from "@/app/lib/models";
+import { CategoryPageProps } from "@/types/categories/CategoryPageProps";
+import { getCategoryBySlug } from "@/lib/client/categories";
+import { getModels } from "@/lib/server/models";
 import ModelsGrid from "@/app/components/models/ModelsGrid";
 import PaginationControls from "@/app/components/models/PaginationControls";
 import { notFound } from "next/navigation";

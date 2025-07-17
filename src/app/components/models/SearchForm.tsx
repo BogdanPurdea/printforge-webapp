@@ -1,6 +1,6 @@
 'use client'
 import Form from "next/form";
-import { SearchFormProps } from "@/app/types/navigation/SearchFormProps";
+import { SearchFormProps } from "@/types/navigation/SearchFormProps";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Input } from "@/app/components/ui/input";

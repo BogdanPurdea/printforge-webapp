@@ -13,10 +13,10 @@ import {
     SelectTrigger,
     SelectValue,
 } from "../ui/select"
-import { ModelUploadFormProps } from '@/app/types/models/ModelUploadFormProps';
+import { ModelUploadFormProps } from '@/types/models/ModelUploadFormProps';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ModelFormData } from '@/app/types/models/ModelFormData';
+import { ModelFormData } from '@/types/models/ModelFormData';
 
 export default function ModelUploadForm({ categories, uploaderId }: ModelUploadFormProps) {
     const { register, handleSubmit, watch, control, formState: { errors } } = useForm<ModelFormData>();

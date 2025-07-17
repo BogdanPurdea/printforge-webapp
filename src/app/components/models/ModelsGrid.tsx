@@ -1,6 +1,6 @@
 'use client'
 
-import { ModelsGridProps } from "@/app/types/models/ModelsGridProps";
+import { ModelsGridProps } from "@/types/models/ModelsGridProps";
 import ModelCard from "@/app/components/models/ModelCard";
 import SortControls from "@/app/components/models/SortControls";
 import SearchForm from '@/app/components/models/SearchForm';

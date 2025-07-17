@@ -1,5 +1,5 @@
-import { prisma } from "@/app/lib/server/prisma";
-import { User } from "@/app/types/users/User";
+import { prisma } from "@/lib/server/prisma";
+import { User } from "@/types/users/User";
 
 export async function getUsers(): Promise<User[]> {
     try {

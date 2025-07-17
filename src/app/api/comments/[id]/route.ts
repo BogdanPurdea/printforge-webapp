@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from "@/app/lib/server/prisma";
+import { prisma } from "@/lib/server/prisma";
 
 /**
  * PUT /api/comments/[id]

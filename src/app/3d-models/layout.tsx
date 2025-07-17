@@ -1,10 +1,7 @@
 import NavCategories from "@/app/components/layout/NavCategories";
+import { ChildrenProps } from "@/types/shared/ChildrenProps";
 
-export default function ModelsLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode
-}>) {
+export default function ModelsLayout({ children }: ChildrenProps) {
     return (
         <div className="relative flex flex-col md:flex-row min-h-screen">
             <NavCategories />

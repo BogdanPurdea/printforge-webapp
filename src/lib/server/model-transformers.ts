@@ -1,5 +1,5 @@
 import { Model as PrismaModel } from '@prisma/client';
-import { Model } from '@/app/types/models/Model';
+import { Model } from '@/types/models/Model';
 
 export function transformPrismaModelToAppModel(prismaModel: PrismaModel & { author?: { name: string }; category?: { name: string; slug: string }; _count?: { likedBy: number } }): Model {
     return {

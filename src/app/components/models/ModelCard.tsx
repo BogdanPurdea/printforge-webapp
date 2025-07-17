@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Pill from "@/app/components/shared/Pill"
-import { ModelCardProps } from "@/app/types/models/ModelCardProps";
+import { ModelCardProps } from "@/types/models/ModelCardProps";
 import LikeButton from "@/app/components/shared/LikeButton"
 import Image from "next/image"
 

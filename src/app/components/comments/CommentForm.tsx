@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { CommentFormProps } from '@/app/types/comments/CommentFormProps';
+import { CommentFormProps } from '@/types/comments/CommentFormProps';
 import { Button } from "@/app/components/ui/button";
 import { Textarea } from "@/app/components/ui/textarea";
 import { useRouter } from "next/navigation";
-import { createComment, updateComment } from "@/app/lib/client/comments";
+import { createComment, updateComment } from "@/lib/client/comments";
 
 export default function CommentForm({ modelId, parentId = null, existingComment, onSuccess }: CommentFormProps) {
     const router = useRouter();

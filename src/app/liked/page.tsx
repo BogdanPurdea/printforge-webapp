@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { useLikes } from '@/app/hooks/useLikes';
-import { getModels } from '@/app/lib/models';
-import { Model } from '@/app/types/models/Model';
+import { getModels } from '@/lib/server/models';
+import { Model } from '@/types/models/Model';
 import ModelsGrid from "@/app/components/models/ModelsGrid";
 import ModelsGridErrorBoundary from '@/app/components/models/ModelsGridErrorBoundary';
 import ModelsGridSkeleton from '@/app/components/models/ModelsGridSkeleton';

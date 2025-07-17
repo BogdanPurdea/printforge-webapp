@@ -1,8 +1,8 @@
 
-import { getUserById } from "@/app/lib/server/users";
-import { getModels } from "@/app/lib/server/models";
+import { getUserById } from "@/lib/server/users";
+import { getModels } from "@/lib/server/models";
 import ModelsGrid from "@/app/components/models/ModelsGrid";
-import { UserProfilePageParams } from "@/app/types/users/UserProfilePageParams";
+import { UserProfilePageParams } from "@/types/users/UserProfilePageParams";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/app/components/ui/button";

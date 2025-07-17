@@ -5,9 +5,9 @@ import CommentForm from "@/app/components/comments/CommentForm";
 import { Button } from "@/app/components/ui/button";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { CommentProps } from '@/app/types/comments/CommentProps';
+import { CommentProps } from '@/types/comments/CommentProps';
 import { FaEdit, FaReply, FaTrash } from "react-icons/fa";
-import { deleteComment } from "@/app/lib/client/comments";
+import { deleteComment } from "@/lib/client/comments";
 
 export default function Comment({ comment, user, modelId }: CommentProps) {
     const router = useRouter();
