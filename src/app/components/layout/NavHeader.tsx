@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { ThemeSwitcher } from '@/app/components/shared/ThemeSwitcher';
+import AuthButtons from './AuthButtons';
 
 export default function NavHeader() {
     const pathname = usePathname();
@@ -42,9 +43,11 @@ export default function NavHeader() {
                     <NavLink href={{pathname: "/3d-models"}} isActive={isActive("/3d-models")}>3D Models</NavLink>
                     <NavLink href={{pathname: "/liked"}} isActive={isActive("/liked")}>Liked</NavLink>
                     <NavLink href={{pathname: "/about"}} isActive={isActive("/about")}>About</NavLink>
-                    <NavLink href={{pathname: "/users/user1"}} isActive={isActive("/users/user1")}>Profile</NavLink>
                 </ul>
-                <ThemeSwitcher />
+                <div className="flex items-center space-x-4">
+                    <ThemeSwitcher />
+                    <AuthButtons />
+                </div>
             </div>
             {/* Hamburger icon for mobile */}
             <div className="flex items-center md:hidden">
@@ -75,10 +78,9 @@ export default function NavHeader() {
                         About
                     </NavLink>
                     <hr className="w-full border-t-2" style={{ borderColor: 'var(--color-orange-accent)' }} />
-                    <NavLink href={{pathname: "/users/user1"}} isActive={isActive("/users/user1")}
-                        onClick={() => setIsMenuOpen(false)}>
-                        Profile
-                    </NavLink>
+                    <div className="flex justify-end w-full" onClick={() => setIsMenuOpen(false)}>
+                        <AuthButtons />
+                    </div>
                 </ul>
             )}
         </nav>

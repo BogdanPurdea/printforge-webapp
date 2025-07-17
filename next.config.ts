@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
       hostname: 'place-hold.it',
       pathname: '/**',
     },
+    {
+      protocol: 'https',
+      hostname: 'avatars.githubusercontent.com',
+      pathname: '/**',
+    },
   ],
 },
 };
