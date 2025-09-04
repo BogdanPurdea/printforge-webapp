@@ -4,6 +4,7 @@
 import { signIn, signOut, useSession } from "next-auth/react"
 import { Button } from "@/app/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function AuthButtons() {
   const { data: session } = useSession()
@@ -11,10 +12,10 @@ export default function AuthButtons() {
   if (session) {
     return (
       <div className="flex items-center gap-4">
-        <span className="text-gray-700 dark:text-gray-300">{session.user.name}</span>
+        <span className="text-gray-700 dark:text-gray-300">{session.user?.name}</span>
         <Image
-          src={session.user.image}
-          alt={session.user.name}
+          src={session.user?.image || "/default-avatar.png"}
+          alt={session.user?.name || "User Avatar"}
           width={32}
           height={32}
           className="rounded-full"
@@ -27,6 +28,9 @@ export default function AuthButtons() {
   return (
     <div className="flex items-center gap-4">
       <Button onClick={() => signIn()}>Sign In</Button>
+      <Link href="/auth/register">
+        <Button>Sign Up</Button>
+      </Link>
     </div>
   )
 }

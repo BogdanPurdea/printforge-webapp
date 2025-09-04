@@ -19,7 +19,7 @@ const montserratAlternates = Montserrat_Alternates({
 
 export default function RootLayout({ children }: ChildrenProps) {
   return (
-    <html lang="en" className={`${albertSans.className} ${montserratAlternates.variable}`}>
+    <html lang="en" className={`${albertSans.className} ${montserratAlternates.variable}`} suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"

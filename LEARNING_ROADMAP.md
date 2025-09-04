@@ -82,7 +82,7 @@ A progressive learning path for improving React, Next.js, and Tailwind CSS skill
 - [X] Learn: ORMs, database design, SQL basics
 
 ### 14. Authentication
-- [ ] Implement NextAuth.js for user login
+- [X] Implement NextAuth.js for user login
 - [ ] Add login/signup forms
 - [ ] Protected routes and middleware
 - [ ] Learn: Authentication flows, JWT, session management

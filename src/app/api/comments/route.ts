@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
         author: {
           select: {
             name: true,
-            avatarUrl: true,
+            image: true,
           },
         },
         parent: {

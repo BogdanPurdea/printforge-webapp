@@ -12,8 +12,8 @@ model User {
   email         String    @unique
   name          String
   emailVerified DateTime? @map("email_verified")
+  hashedPassword String? @map("hashed_password")
   image         String?
-  avatarUrl     String?
   about         String?
   accounts      Account[]
   sessions      Session[]

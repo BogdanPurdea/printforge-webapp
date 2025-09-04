@@ -8,7 +8,7 @@ export async function getUsers(): Promise<User[]> {
                 id: true,
                 name: true,
                 email: true,
-                avatarUrl: true,
+                image: true,
                 about: true
             }
         });
@@ -28,7 +28,7 @@ export async function getUserById(id: string): Promise<User> {
                 id: true,
                 name: true,
                 email: true,
-                avatarUrl: true,
+                image: true,
                 about: true
             }
         });
@@ -56,7 +56,7 @@ export async function getUsersByIds(ids: string[]): Promise<User[]> {
                 id: true,
                 name: true,
                 email: true,
-                avatarUrl: true,
+                image: true,
                 about: true
             }
         });

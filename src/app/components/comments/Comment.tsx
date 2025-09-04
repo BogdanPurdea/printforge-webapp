@@ -44,7 +44,7 @@ export default function Comment({ comment, user, modelId }: CommentProps) {
     return (
         <div className="flex items-start space-x-4">
             <Image
-                src={user?.avatarUrl || "/default-avatar.png"}
+                src={user?.image || "/default-avatar.png"}
                 alt={user?.name || "Anonymous user"}
                 width={40}
                 height={40}

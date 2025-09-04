@@ -1,23 +1,23 @@
 [
-  {
-    "id": "user1",
-    "email": "john.doe@example.com",
-    "name": "John Doe",
-    "avatarUrl": "https://i.pravatar.cc/150?u=a04258114e29026702g",
-    "about": "A passionate 3D printing enthusiast."
-  },
-  {
-    "id": "user2",
-    "email": "jane.smith@example.com",
-    "name": "Jane Smith",
-    "avatarUrl": "https://i.pravatar.cc/150?u=a04258114e29026702d",
-    "about": "Loves designing functional prints."
-  },
-  {
-    "id": "user3",
-    "email": "peter.jones@example.com",
-    "name": "Peter Jones",
-    "avatarUrl": "https://i.pravatar.cc/150?u=a04258114e29026702e",
-    "about": "Specializes in miniature models."
-  }
+    {
+        "id": "user1",
+        "email": "john.doe@example.com",
+        "name": "John Doe",
+        "image": "https://i.pravatar.cc/150?u=a04258114e29026702g",
+        "about": "A passionate 3D printing enthusiast."
+    },
+    {
+        "id": "user2",
+        "email": "jane.smith@example.com",
+        "name": "Jane Smith",
+        "image": "https://i.pravatar.cc/150?u=a04258114e29026702d",
+        "about": "Loves designing functional prints."
+    },
+    {
+        "id": "user3",
+        "email": "peter.jones@example.com",
+        "name": "Peter Jones",
+        "image": "https://i.pravatar.cc/150?u=a04258114e29026702e",
+        "about": "Specializes in miniature models."
+    }
 ]
